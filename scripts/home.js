@@ -2003,7 +2003,7 @@ function fillQuestion() {
         $.ajax({
             type: 'POST',
             url: PHP_PATH+'upload-img-with-id.php',
-            dataType: 'text',
+            data: fd2,
             cache: false,
             success: function(a) {
                 console.log(a);
