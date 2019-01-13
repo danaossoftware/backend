@@ -2420,6 +2420,9 @@ function getDaftarBab() {
                             }
                         });
                     });
+                    $("#prompt-no").on("click", function() {
+                        $("#prompt").css("display", "none");
+                    });
                 });
             }
         },
