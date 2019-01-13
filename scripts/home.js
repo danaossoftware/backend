@@ -41,7 +41,6 @@ $(document).ready(function () {
         $("#users-panel-selector").removeClass("active");
         $("#settings-panel").css("display", "none");
         $("#settings-panel-selector").removeClass("active");
-        getCourses();
     });
     $("#course-panel-selector").on("click", function () {
         $("#home-panel").css("display", "none");
@@ -2301,6 +2300,7 @@ function getDaftarBab() {
                     var bab = jsonData[i];
                     var div = document.createElement("div");
                     div.setAttribute("class", "bab-item");
+                    div.setAttribute("style", "position: relative;");
                     var img = document.createElement("img");
                     if (bab.img_url !== '') {
                         img.src = bab.img_url;
@@ -2334,9 +2334,18 @@ function getDaftarBab() {
                         }
                     });
                     desc.setAttribute("style", "font-size: 10px; color: #888888; margin-left: 10px; margin-right: 10px; margin-bottom: 10px;");
+                    var menuContainer = document.createElement("div");
+                    menuContainer.setAttribute("style", "width: 100%; height: 100%; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; left: 0; top: 0;");
+                    var menu = document.createElement("img");
+                    menu.setAttribute("src", "img/menu.png");
+                    menu.setAttribute("width", "20px");
+                    menu.setAttribute("height", "35px");
+                    menu.setAttribute("style", "margin-right: 10px; margin-bottom: 10px;");
+                    menuContainer.appendChild(menu);
                     div.appendChild(img);
                     div.appendChild(name);
                     div.appendChild(desc);
+                    div.appendChild(menuContainer);
                     document.getElementById("babs").appendChild(div);
                     items += ("" +
                         "<div class='bab-item'>" +
