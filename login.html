@@ -42,20 +42,8 @@
                         alert("Error login: " + s + " " + e);
                     }
                 });
-                $("#login-btn").on({
-                    mouseenter: function() {
-                        $("#login-btn").fadeOut(500);
-                    },
-                    mouseleave: function() {
-                        $("#login-btn").fadeIn(500);
-                    }
-                });
-                $("#login-text").on({
-                    mouseenter: function() {
-                        alert("Hello");
-                    },
-                    mouseleave: function() {
-                    }
+                $("#login-text").mouseenter(function() {
+                    alert("Hello 2");
                 });
             });
         }
