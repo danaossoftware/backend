@@ -2349,7 +2349,7 @@ function getDaftarBab() {
                     edit.setAttribute("style", "cursor: pointer;");
                     edit.innerHTML = "Edit";
                     var remove = document.createElement("div");
-                    remove.setAttribute("class, ""bab-dialog-remove");
+                    remove.setAttribute("class", "bab-dialog-remove");
                     remove.setAttribute("style", "cursor: pointer;");
                     remove.innerHTML = "Hapus";
                     dialog.appendChild(edit);
