@@ -2390,7 +2390,18 @@ function getDaftarBab() {
                         if (babName == '') {
                             return;
                         }
-
+                        $.ajax({
+                            type: 'GET',
+                            url: PHP_PATH+'edit-bab.php',
+                            data: {'id': jsonData[i]["id"], "name": jsonData[i]["name"]},
+                            dataType: 'text',
+                            cache: false,
+                            success: function(a) {
+                                getDaftarBab();
+                            },
+                            error: function(a, b, c) {
+                            }
+                        });
                     });
                 });
             }
