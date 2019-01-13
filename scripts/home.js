@@ -2509,12 +2509,14 @@ function getCourses() {
                     "</td>" +
                     "<td>" + name + "</td>" +
                     "<td>" + lecturer + "</td>" +
+                    "<td><a class='edit-course link' style='cursor: pointer;'>Edit</a></td>" +
                     "<td><a class='delete-course link' style='cursor: pointer;'>Hapus</a></td>" +
                     "" + "</tr>");
             }
             $("#courses").find("tbody").append(items);
             setDeleteAllCoursesListener();
             setDeleteCourseListener();
+            setEditCourseListener();
             setCheckBoxListener();
             setItemCheckBoxListener();
         },
@@ -2619,6 +2621,7 @@ function addNewCourse() {
                         $('#dialog').css('display', 'none');
                         setDeleteAllCoursesListener();
                         setDeleteCourseListener();
+                        setEditCourseListener();
                     },
                     error: function (a, b, c) {
                         alert(b + ' ' + c);
@@ -2647,6 +2650,12 @@ function cancelAddingCourse() {
     $('#course-name').val("");
     $('#dialog').css('display', 'none');
     $('#add-course-dialog').css('height', '240px');
+}
+
+function setEditCourseListener() {
+    $(".edit-course").on("click", function(a) {
+        alert("Hello, world");
+    });
 }
 
 function setDeleteCourseListener() {
@@ -2722,6 +2731,7 @@ function uploadCourses() {
                     }
                     setDeleteAllCoursesListener();
                     setDeleteCourseListener();
+                    setEditCourseListener();
                 },
                 error: function (a, b, c) {
                     alert(b + ' ' + c);
