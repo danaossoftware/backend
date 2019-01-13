@@ -2383,7 +2383,15 @@ function getDaftarBab() {
                     var babItem = $(this).parent().parent();
                     var daftarBab = babItem.parent();
                     var index = daftarBab.children().index(babItem);
+                    $("#edit-bab-name").val(jsonData[index]["name"]);
                     $("#edit-bab-container").css("display", "block");
+                    $("#edit-bab-save").on("click", function() {
+                        var babName = $("#edit-bab-name").val();
+                        if (babName == '') {
+                            return;
+                        }
+
+                    });
                 });
             }
         },
