@@ -2345,11 +2345,11 @@ function getDaftarBab() {
                     var dialog = document.createElement("div");
                     dialog.setAttribute("style", "position: absolute; right: 0; bottom: 10px; padding: 10px; background-color: white; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4); color: black; font-size: 20px;");
                     var edit = document.createElement("div");
-                    edit.setClass("bab-dialog-edit");
+                    edit.setAttribute("class", "bab-dialog-edit");
                     edit.setAttribute("style", "cursor: pointer;");
                     edit.innerHTML = "Edit";
                     var remove = document.createElement("div");
-                    remove.setClass("bab-dialog-remove");
+                    remove.setAttribute("class, ""bab-dialog-remove");
                     remove.setAttribute("style", "cursor: pointer;");
                     remove.innerHTML = "Hapus";
                     dialog.appendChild(edit);
