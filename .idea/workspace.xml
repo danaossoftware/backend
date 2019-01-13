@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="2383" column="33" selection-start-line="2383" selection-start-column="33" selection-end-line="2383" selection-end-column="33" />
+            <state relative-caret-position="407">
+              <caret line="2380" column="50" selection-start-line="2380" selection-start-column="50" selection-end-line="2380" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -163,7 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>imageData =</find>
       <find>imagedata !=</find>
       <find>fillQuestionImageFile</find>
       <find>$img</find>
@@ -193,6 +191,7 @@
       <find>getdaftarva</find>
       <find>bab-dialog</find>
       <find>10px</find>
+      <find>bab-dialog-edit</find>
     </findStrings>
     <replaceStrings>
       <replace>$results</replace>
@@ -412,12 +411,12 @@
       <workItem from="1547353558532" duration="1352000" />
       <workItem from="1547360714410" duration="3275000" />
       <workItem from="1547376478265" duration="184000" />
-      <workItem from="1547376927678" duration="3502000" />
+      <workItem from="1547376927678" duration="3648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243340000" />
+    <option name="totallyTimeSpent" value="243486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -896,8 +895,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="2383" column="33" selection-start-line="2383" selection-start-column="33" selection-end-line="2383" selection-end-column="33" />
+        <state relative-caret-position="407">
+          <caret line="2380" column="50" selection-start-line="2380" selection-start-column="50" selection-end-line="2380" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />

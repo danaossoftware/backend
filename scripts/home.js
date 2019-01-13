@@ -2378,9 +2378,9 @@ function getDaftarBab() {
                     }
                 });
                 $(".bab-dialog-edit").on("click", function() {
-                    var dialog = $(this).parent();
-                    var babItem = dialog.parent();
-                    var index = babItem.children().index(dialog);
+                    var babItem = $(this).parent().parent();
+                    var daftarBab = babItem.parent();
+                    var index = daftarBab.children().index(babItem);
                     alert(index);
                 });
             }
