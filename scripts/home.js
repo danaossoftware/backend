@@ -2654,7 +2654,7 @@ function cancelAddingCourse() {
 
 function setEditCourseListener() {
     $(".edit-course").on("click", function(a) {
-        alert("Hello, world");
+
     });
 }
 
