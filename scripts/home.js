@@ -26,7 +26,26 @@ var edittedCourseID;
 
 $(document).ready(function () {
     setCheckBoxListener();
+    $("#home-panel-selector").on("click", function () {
+        $("#home-panel").css("display", "block");
+        $("#home-panel-selector").addClass("active");
+        $("#questions-panel").css("display", "none");
+        $("#questions-panel-selector").removeClass("active");
+        $("#bab-panel").css("display", "none");
+        $("#bab-panel-selector").removeClass("active");
+        $("#course-panel").css("display", "none");
+        $("#course-panel-selector").removeClass("active");
+        $("#admins-panel").css("display", "none");
+        $("#admins-panel-selector").removeClass("active");
+        $("#users-panel").css("display", "none");
+        $("#users-panel-selector").removeClass("active");
+        $("#settings-panel").css("display", "none");
+        $("#settings-panel-selector").removeClass("active");
+        getCourses();
+    });
     $("#course-panel-selector").on("click", function () {
+        $("#home-panel").css("display", "none");
+        $("#home-panel-selector").removeClass("active");
         $("#questions-panel").css("display", "none");
         $("#questions-panel-selector").removeClass("active");
         $("#bab-panel").css("display", "none");
@@ -42,6 +61,8 @@ $(document).ready(function () {
         getCourses();
     });
     $("#questions-panel-selector").on("click", function () {
+        $("#home-panel").css("display", "none");
+        $("#home-panel-selector").removeClass("active");
         $("#course-panel").css("display", "none");
         $("#course-panel-selector").removeClass("active");
         $("#bab-panel").css("display", "none");
@@ -57,6 +78,8 @@ $(document).ready(function () {
         getQuestions();
     });
     $("#bab-panel-selector").on("click", function () {
+        $("#home-panel").css("display", "none");
+        $("#home-panel-selector").removeClass("active");
         $("#course-panel").css("display", "none");
         $("#course-panel-selector").removeClass("active");
         $("#questions-panel").css("display", "none");
@@ -72,6 +95,8 @@ $(document).ready(function () {
         getDaftarBab();
     });
     $("#admins-panel-selector").on("click", function () {
+        $("#home-panel").css("display", "none");
+        $("#home-panel-selector").removeClass("active");
         $("#course-panel").css("display", "none");
         $("#course-panel-selector").removeClass("active");
         $("#questions-panel").css("display", "none");
@@ -87,6 +112,8 @@ $(document).ready(function () {
         getAdmins();
     });
     $("#users-panel-selector").on("click", function () {
+        $("#home-panel").css("display", "none");
+        $("#home-panel-selector").removeClass("active");
         $("#course-panel").css("display", "none");
         $("#course-panel-selector").removeClass("active");
         $("#questions-panel").css("display", "none");
@@ -102,6 +129,8 @@ $(document).ready(function () {
         getUsers();
     });
     $("#settings-panel-selector").on("click", function () {
+        $("#home-panel").css("display", "none");
+        $("#home-panel-selector").removeClass("active");
         $("#course-panel").css("display", "none");
         $("#course-panel-selector").removeClass("active");
         $("#questions-panel").css("display", "none");
