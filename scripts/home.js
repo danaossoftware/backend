@@ -2345,7 +2345,7 @@ function getDaftarBab() {
                     menuImg.setAttribute("src", "img/menu.png");
                     menuImg.setAttribute("width", "3px");
                     menuImg.setAttribute("height", "15px");
-                    menu.appendChild(menuContainer);
+                    menu.appendChild(menuImg);
                     menuContainer.appendChild(menu);
                     var dialog = document.createElement("div");
                     dialog.setAttribute("class", "bab-dialog");
