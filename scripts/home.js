@@ -2660,9 +2660,9 @@ function setEditCourseListener() {
         var tr = $(this).parent().parent();
         var table = tr.parent();
         var index = table.children().index(tr);
-        alert(index);
         edittedCourseID = coursesJSON[index]["id"];
-        alert(edittedCourseID);
+        $("#edit-course-name").val(coursesJSON[index]["name"]);
+        $("#edit-course-lecturer").val(coursesJSON[index]["lecturer"]);
         $('#edit-course-container').css("display", "flex");
     });
 }
