@@ -1997,7 +1997,7 @@ function fillQuestion() {
     var videoURL = "";
     var audioURL = "";
     if (imageData != '') {
-        alert(fillQuestionImageFile);
+        alert(fillQuestionImageFile.name);
         return;
         imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
         var fd2 = new FormData();
