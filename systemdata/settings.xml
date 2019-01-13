@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <settings>
     <mysql>
-        <website>localhost</website>
-        <host>localhost</host>
+        <website>ilatih.com</website>
+        <host>ilatih.com</host>
         <port>80</port>
         <dbuser>root</dbuser>
         <dbpass></dbpass>

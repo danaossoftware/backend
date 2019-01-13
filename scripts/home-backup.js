@@ -1,4 +1,4 @@
-const PHP_PATH = "http://localhost/backend/scripts/";
+const PHP_PATH = "http://ilatih.com/backend/scripts/";
 var lecturers = {};
 var courseIndex = -1;
 var courseName = "";
@@ -93,7 +93,7 @@ $(document).ready(function () {
                 cache: false,
                 success: function(a) {
                     var imgFileName = a;
-                    babImgURL = "http://localhost/backend/userdata/imgs/"+imgFileName;
+                    babImgURL = "http://ilatih.com/backend/userdata/imgs/"+imgFileName;
                     document.getElementById("bab-img").src = babImgURL;
                 },
                 error: function(a, b, c) {
@@ -212,7 +212,7 @@ function loadBabs() {
                     div.setAttribute("style", "cursor: pointer;");
                     var img = document.createElement("img");
                     if (bab.img_url === '') {
-                        img.src = "http://localhost/backend/img/bab-placeholder.jpg";
+                        img.src = "http://ilatih.com/backend/img/bab-placeholder.jpg";
                     } else {
                         img.src = bab.img_url;
                     }
@@ -321,7 +321,7 @@ function addBab(name0, questionsCount, imgURL) {
     if (imgURL !== '') {
         img.src = imgURL;
     } else {
-        img.src = "http://localhost/backend/img/bab-placeholder.jpg";
+        img.src = "http://ilatih.com/backend/img/bab-placeholder.jpg";
     }
     img.setAttribute("width", "100%");
     img.setAttribute("height", "150px");
@@ -359,7 +359,7 @@ function getDaftarBab() {
                     if (bab.img_url !== '') {
                         img.src = bab.img_url;
                     } else {
-                        img.src = "http://localhost/backend/img/bab-placeholder.jpg";
+                        img.src = "http://ilatih.com/backend/img/bab-placeholder.jpg";
                     }
                     img.setAttribute("width", "100%");
                     img.setAttribute("height", "150px");

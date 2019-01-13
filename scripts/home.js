@@ -1,4 +1,4 @@
-const PHP_PATH = "http://localhost/backend/scripts/";
+const PHP_PATH = "http://ilatih.com/backend/scripts/";
 var lecturers = {};
 var courseIndex = -1;
 var courseName = "";
@@ -172,7 +172,7 @@ $(document).ready(function () {
                 cache: false,
                 success: function (a) {
                     var imgFileName = a;
-                    babImgURL = "http://localhost/backend/userdata/imgs/" + imgFileName;
+                    babImgURL = "http://ilatih.com/backend/userdata/imgs/" + imgFileName;
                     document.getElementById("bab-img").src = babImgURL;
                 },
                 error: function (a, b, c) {
@@ -294,7 +294,7 @@ function loadSettings() {
     $("#db-form").css("margin-top", "20px");
     $.ajax({
         type: 'GET',
-        url: "http://localhost/backend/systemdata/settings.xml",
+        url: "http://ilatih.com/backend/systemdata/settings.xml",
         dataType: 'text',
         cache: false,
         success: function (a) {
@@ -1188,7 +1188,7 @@ function getQuestions() {
                     var divExpandCourseImgCtr = document.createElement("div");
                     divExpandCourseImgCtr.setAttribute("class", "expand-img-ctr");
                     var divExpandCourseImg = document.createElement("img");
-                    divExpandCourseImg.src = "http://localhost/backend/img/expand.png";
+                    divExpandCourseImg.src = "http://ilatih.com/backend/img/expand.png";
                     divExpandCourseImg.setAttribute("width", "10px");
                     divExpandCourseImg.setAttribute("height", "10px");
                     divExpandCourseImgCtr.appendChild(divExpandCourseImg);
@@ -1209,7 +1209,7 @@ function getQuestions() {
                         var divExpandBabImgCtr = document.createElement("div");
                         divExpandBabImgCtr.setAttribute("class", "expand-img-ctr");
                         var divExpandBabImg = document.createElement("img");
-                        divExpandBabImg.src = "http://localhost/backend/img/expand.png";
+                        divExpandBabImg.src = "http://ilatih.com/backend/img/expand.png";
                         divExpandBabImg.setAttribute("width", "10px");
                         divExpandBabImg.setAttribute("height", "10px");
                         divExpandBabImgCtr.appendChild(divExpandBabImg);
@@ -1559,15 +1559,15 @@ function uploadFile(file, mediaType, success, failure) {
     reader.onload = function (e) {
         $.ajax({
             type: 'POST',
-            url: 'http://localhost/backend/scripts/upload-media-with-php-input.php?filename=' + imgFileName + '&type=' + mediaType,
+            url: 'http://ilatih.com/backend/scripts/upload-media-with-php-input.php?filename=' + imgFileName + '&type=' + mediaType,
             data: e.target.result,
             cache: false,
             success: function (a) {
                 if (start >= total) {
                     if (mediaType == "image") {
-                        success("http://localhost/backend/userdata/imgs/" + imgFileName);
+                        success("http://ilatih.com/backend/userdata/imgs/" + imgFileName);
                     } else if (mediaType == "video") {
-                        success("http://localhost/backend/userdata/videos/" + imgFileName);
+                        success("http://ilatih.com/backend/userdata/videos/" + imgFileName);
                     }
                     return;
                 }
@@ -1726,7 +1726,7 @@ function addQuestion() {
     imageData = "";
     audioData = "";
     videoData = "";
-    $("#fill-question-img").css("backgroundImage", "http://localhost/backend/img/bab-placeholder.jpg");
+    $("#fill-question-img").css("backgroundImage", "http://ilatih.com/backend/img/bab-placeholder.jpg");
     $("#fill-question-video-source").attr("src", "");
     $("#fill-question-video")[0].load();
     $("#fill-question-audio-source").attr("src", "");
@@ -1811,7 +1811,7 @@ function saveEdittedQuestion() {
     var videoURL = "";
     var audioURL = "";
     if (imageData != '') {
-        imageURL = "http://localhost/backend/userdata/imgs/"+imageID;
+        imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
         var fd2 = new FormData();
         fd2.append("id", imageID);
         fd2.append("img_data", imageData);
@@ -1833,7 +1833,7 @@ function saveEdittedQuestion() {
         });
     }
     if (videoData != '') {
-        videoURL = "http://localhost/backend/userdata/videos/"+videoID;
+        videoURL = "http://ilatih.com/backend/userdata/videos/"+videoID;
         var fd3 = new FormData();
         fd3.append("id", videoID);
         fd3.append("video_data", videoData);
@@ -1855,7 +1855,7 @@ function saveEdittedQuestion() {
         });
     }
     if (audioData != '') {
-        audioURL = "http://localhost/backend/userdata/audios/"+audioID;
+        audioURL = "http://ilatih.com/backend/userdata/audios/"+audioID;
         var fd4 = new FormData();
         fd4.append("id", audioID);
         fd4.append("audio_data", audioData);
@@ -1996,7 +1996,7 @@ function fillQuestion() {
     var videoURL = "";
     var audioURL = "";
     if (imageData != '') {
-        imageURL = "http://localhost/backend/userdata/imgs/"+imageID;
+        imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
         var fd2 = new FormData();
         fd2.append("id", imageID);
         fd2.append("img_data", imageData);
@@ -2008,9 +2008,9 @@ function fillQuestion() {
             contentType: false,
             cache: false,
             success: function(a) {
-                if (imageSize > audioSize && imageSize > videoSize) {
+                //if (imageSize > audioSize && imageSize > videoSize) {
                     $("#loading-container").css("display", "none");
-                }
+                //}
             },
             error: function(a, b, c) {
                 alert(b+' '+c);
@@ -2018,7 +2018,7 @@ function fillQuestion() {
         });
     }
     if (videoData != '') {
-        videoURL = "http://localhost/backend/userdata/videos/"+videoID;
+        videoURL = "http://ilatih.com/backend/userdata/videos/"+videoID;
         var fd3 = new FormData();
         fd3.append("id", videoID);
         fd3.append("video_data", videoData);
@@ -2030,9 +2030,9 @@ function fillQuestion() {
             data: fd3,
             cache: false,
             success: function(a) {
-                if (videoSize > imageSize && videoSize > audioSize) {
+                //if (videoSize > imageSize && videoSize > audioSize) {
                     $("#loading-container").css("display", "none");
-                }
+                //}
             },
             error: function(a, b, c) {
                 alert(b+' '+c);
@@ -2040,7 +2040,7 @@ function fillQuestion() {
         });
     }
     if (audioData != '') {
-        audioURL = "http://localhost/backend/userdata/audios/"+audioID;
+        audioURL = "http://ilatih.com/backend/userdata/audios/"+audioID;
         var fd4 = new FormData();
         fd4.append("id", audioID);
         fd4.append("audio_data", audioData);
@@ -2052,9 +2052,9 @@ function fillQuestion() {
             data: fd4,
             cache: false,
             success: function(a) {
-                if (audioSize > imageSize && audioSize > videoSize) {
+                //if (audioSize > imageSize && audioSize > videoSize) {
                     $("#loading-container").css("display", "none");
-                }
+                //}
             },
             error: function(a, b, c) {
                 alert(b+' '+c);
@@ -2123,7 +2123,7 @@ function loadBabs(courseName) {
                     div.setAttribute("style", "cursor: pointer;");
                     var img = document.createElement("img");
                     if (bab.img_url == '') {
-                        img.src = "http://localhost/backend/img/bab-placeholder.jpg";
+                        img.src = "http://ilatih.com/backend/img/bab-placeholder.jpg";
                     } else {
                         img.src = bab.img_url;
                     }
@@ -2232,7 +2232,7 @@ function addBab(name0, questionsCount, imgURL) {
     if (imgURL !== '') {
         img.src = imgURL;
     } else {
-        img.src = "http://localhost/backend/img/bab-placeholder.jpg";
+        img.src = "http://ilatih.com/backend/img/bab-placeholder.jpg";
     }
     img.setAttribute("width", "100%");
     img.setAttribute("height", "150px");
@@ -2270,7 +2270,7 @@ function getDaftarBab() {
                     if (bab.img_url !== '') {
                         img.src = bab.img_url;
                     } else {
-                        img.src = "http://localhost/backend/img/bab-placeholder.jpg";
+                        img.src = "http://ilatih.com/backend/img/bab-placeholder.jpg";
                     }
                     img.setAttribute("width", "100%");
                     img.setAttribute("height", "150px");
