@@ -2403,6 +2403,9 @@ function getDaftarBab() {
                             }
                         });
                     });
+                    $("#edit-bab-cancel").on("click", function() {
+                        $("#edit-bab-container").css("display", "none");
+                    });
                 });
                 $(".bab-dialog-remove").on("click", function() {
                     $("#prompt-title").html("Hapus Bab");
