@@ -42,8 +42,10 @@
                         alert("Error login: " + s + " " + e);
                     }
                 });
-                $("#login-text").mouseenter(function() {
-                    alert("Hello 2");
+                $(document).on({
+                    mouseenter: function() {
+                        alert("Hello");
+                    }
                 });
             });
         }
