@@ -2956,6 +2956,7 @@ function saveEdittedCourse() {
         dataType: 'text',
         cache: false,
         success: function(a) {
+            $("#edit-course-container").css("display", "none");
             getCourses();
         },
         error: function(a, b, c) {
