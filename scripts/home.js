@@ -2372,8 +2372,12 @@ function getDaftarBab() {
                         "</div>" +
                         "");
                 }
+                $(".bab-items").on("click", function() {
+                    $(this).find(".bab-dialog").css("display", "none");
+                });
                 $(".menu").on("click", function() {
-                    var dialog = $(this).parent().parent().find(".bab-dialog");
+                    var babItem = $(this).parent().parent();
+                    var dialog = babItem.find(".bab-dialog");
                     if (dialog.css("display") == "none") {
                         dialog.css("display", "block");
                     } else {
