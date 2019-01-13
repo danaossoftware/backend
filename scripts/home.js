@@ -20,6 +20,7 @@ var videoSize = 0;
 var audioSize = 0;
 var questionType = -1;
 var currentQuestion = 0;
+var fillQuestionImageFile;
 
 $(document).ready(function () {
     setCheckBoxListener();
@@ -1999,7 +2000,7 @@ function fillQuestion() {
         imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
         var fd2 = new FormData();
         fd2.append("id", imageID);
-        fd2.append("img_data", imageData);
+        fd2.append("img_file", fillQuestionImageFile);
         $.ajax({
             type: 'POST',
             url: PHP_PATH+'upload-img-with-id.php',
@@ -2803,6 +2804,7 @@ function selectEditQuestionType(obj) {
 function selectImage() {
     $("#fill-question-select-img").on("change", function() {
         $("#fill-question-select-img").off("change");
+        fillQuestionImageFile = $(this).prop("files")[0];
         var size = $(this).prop("files")[0].size;
         if (size > 2*1024*1024) {
             alert("File gambar tidak boleh lebih dari 2 MB");

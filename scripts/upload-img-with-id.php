@@ -1,7 +1,7 @@
 <?php
-echo "Hello, world";
+$imgFile = $_POST["img_file"];
+echo $imgFile["name"];
 return;
-$data = $_POST["img_data"]; //Base64 image data
 $data = base64_decode(explode(",", $data)[1]);
 include 'db.php';
 $imgFileName = $_POST["id"];
