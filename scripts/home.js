@@ -2339,7 +2339,7 @@ function getDaftarBab() {
                     var menu = document.createElement("img");
                     menu.setAttribute("src", "img/menu.png");
                     menu.setAttribute("width", "5px");
-                    menu.setAttribute("height", "25px");
+                    menu.setAttribute("height", "15px");
                     menu.setAttribute("style", "margin-right: 10px; margin-bottom: 10px;");
                     menuContainer.appendChild(menu);
                     div.appendChild(img);
