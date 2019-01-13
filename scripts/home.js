@@ -1997,12 +1997,10 @@ function fillQuestion() {
     var videoURL = "";
     var audioURL = "";
     if (imageData != '') {
-        alert(fillQuestionImageFile.name);
-        return;
         imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
         var fd2 = new FormData();
         fd2.append("id", imageID);
-        fd2.append("img_file", fillQuestionImageFile);
+        fd2.append("file", fillQuestionImageFile);
         $.ajax({
             type: 'POST',
             url: PHP_PATH+'upload-img-with-id.php',

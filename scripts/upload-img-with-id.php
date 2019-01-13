@@ -1,6 +1,6 @@
 <?php
-$imgFile = $_POST["img_file"];
-echo "Hello";
+$imgFile = $_FILES["file"];
+echo $imgFile["name"];
 return;
 $data = base64_decode(explode(",", $data)[1]);
 include 'db.php';
