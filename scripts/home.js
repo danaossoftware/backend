@@ -2338,9 +2338,7 @@ function getDaftarBab() {
                     menuContainer.setAttribute("style", "width: 100%; height: 100%; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; left: 0; top: 0;");
                     var menu = document.createElement("div");
                     menu.setAttribute("class", "menu");
-                    menu.setAttribute("width", "50px");
-                    menu.setAttribute("height", "50px");
-                    menu.setAttribute("style", "background-color: red; display: flex; justify-content: center; align-items: center;");
+                    menu.setAttribute("style", "width: 50px; height: 50px; background-color: red; display: flex; justify-content: center; align-items: center;");
                     var menuImg = document.createElement("img");
                     menuImg.setAttribute("src", "img/menu.png");
                     menuImg.setAttribute("width", "3px");
