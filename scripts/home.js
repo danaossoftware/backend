@@ -2404,6 +2404,23 @@ function getDaftarBab() {
                         });
                     });
                 });
+                $(".bab-dialog.remove").on("click", function() {
+                    $("#prompt-title").html("Hapus Bab");
+                    $("#prompt-text").html("Apakah Anda yakin ingin menghapus bab ini?");
+                    $("#prompt").css("display", "block");
+                    $("#prompt-yes").on("click", function() {
+                        $.ajax({
+                            type: 'GET',
+                            url: PHP_PATH+'remove-bab.php',
+                            data: {'id': jsonData[index]["id"]},
+                            dataType: 'text',
+                            cache: false,
+                            success: function(a) {
+                                getDaftarBab();
+                            }
+                        });
+                    });
+                });
             }
         },
         error: function (a, b, c) {

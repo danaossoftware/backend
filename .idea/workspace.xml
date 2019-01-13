@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/remove-bab.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="2398" column="50" lean-forward="true" selection-start-line="2398" selection-start-column="50" selection-end-line="2398" selection-end-column="50" />
+            <state relative-caret-position="509">
+              <caret line="2418" column="47" selection-start-line="2418" selection-start-column="47" selection-end-line="2418" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -73,6 +74,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/remove-bab.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/edit-bab.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -84,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="1154" column="42" selection-start-line="1154" selection-start-column="42" selection-end-line="1154" selection-end-column="42" />
+            <state relative-caret-position="50">
+              <caret line="1101" column="32" lean-forward="true" selection-start-line="1101" selection-start-column="32" selection-end-line="1101" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -139,6 +149,7 @@
                 <element signature="n#style#0;n#div#0;n#div#14;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#14;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#17;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -179,7 +190,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hapus</find>
       <find>nama pemb</find>
       <find>loadcourses</find>
       <find>delete-course</find>
@@ -209,6 +219,7 @@
       <find>edit-bab</find>
       <find>getdaftarbab</find>
       <find>currentEdittedBabIndex</find>
+      <find>prompt-no</find>
     </findStrings>
     <replaceStrings>
       <replace>$results</replace>
@@ -253,7 +264,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/get-admins.php" />
         <option value="$PROJECT_DIR$/scripts/get-all-babs.php" />
         <option value="$PROJECT_DIR$/scripts/get-bab.php" />
         <option value="$PROJECT_DIR$/scripts/get-courses.php" />
@@ -303,6 +313,7 @@
         <option value="$PROJECT_DIR$/css/home.css" />
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/scripts/edit-bab.php" />
+        <option value="$PROJECT_DIR$/scripts/remove-bab.php" />
         <option value="$PROJECT_DIR$/scripts/home.js" />
       </list>
     </option>
@@ -428,12 +439,12 @@
       <workItem from="1547353558532" duration="1352000" />
       <workItem from="1547360714410" duration="3275000" />
       <workItem from="1547376478265" duration="184000" />
-      <workItem from="1547376927678" duration="4747000" />
+      <workItem from="1547376927678" duration="5329000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244585000" />
+    <option name="totallyTimeSpent" value="245167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -466,13 +477,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/get-all-babs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/get-bab.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -837,8 +841,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="1154" column="42" selection-start-line="1154" selection-start-column="42" selection-end-line="1154" selection-end-column="42" />
+        <state relative-caret-position="50">
+          <caret line="1101" column="32" lean-forward="true" selection-start-line="1101" selection-start-column="32" selection-end-line="1101" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -892,6 +896,7 @@
             <element signature="n#style#0;n#div#0;n#div#14;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#14;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#17;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -918,10 +923,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/remove-bab.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="2398" column="50" lean-forward="true" selection-start-line="2398" selection-start-column="50" selection-end-line="2398" selection-end-column="50" />
+        <state relative-caret-position="509">
+          <caret line="2418" column="47" selection-start-line="2418" selection-start-column="47" selection-end-line="2418" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
