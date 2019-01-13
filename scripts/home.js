@@ -2337,13 +2337,15 @@ function getDaftarBab() {
                     var menuContainer = document.createElement("div");
                     menuContainer.setAttribute("style", "width: 100%; height: 100%; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; left: 0; top: 0;");
                     var menu = document.createElement("img");
+                    menu.setAttribute("class", "menu");
                     menu.setAttribute("src", "img/menu.png");
                     menu.setAttribute("width", "3px");
                     menu.setAttribute("height", "15px");
                     menu.setAttribute("style", "margin-right: 10px; margin-bottom: 10px;");
                     menuContainer.appendChild(menu);
                     var dialog = document.createElement("div");
-                    dialog.setAttribute("style", "position: absolute; right: 0; bottom: -10px; padding: 10px; background-color: white; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4); color: black; font-size: 20px;");
+                    dialog.setAttribute("class", "bab-dialog");
+                    dialog.setAttribute("style", "display: none; position: absolute; right: 0; bottom: 10px; padding: 10px; background-color: white; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4); color: black; font-size: 20px;");
                     var edit = document.createElement("div");
                     edit.setAttribute("class", "bab-dialog-edit");
                     edit.setAttribute("style", "cursor: pointer;");
@@ -2366,6 +2368,14 @@ function getDaftarBab() {
                         "</div>" +
                         "");
                 }
+                $(".menu").on("click", function() {
+                    var dialog = $(this).parent().parent().find(".bab-dialog");
+                    if (dialog.css("display") == "none") {
+                        dialog.css("display", "block");
+                    } else {
+                        dialog.css("display", "none");
+                    }
+                });
             }
         },
         error: function (a, b, c) {
