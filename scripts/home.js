@@ -2000,7 +2000,7 @@ function fillQuestion() {
         imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
         var fd2 = new FormData();
         fd2.append("id", imageID);
-        fd2.append("file", fillQuestionImageFile);
+        fd2.append("img_file", fillQuestionImageFile);
         $.ajax({
             type: 'POST',
             url: PHP_PATH+'upload-img-with-id.php',
@@ -2010,7 +2010,6 @@ function fillQuestion() {
             contentType: false,
             cache: false,
             success: function(a) {
-                console.log(a);
                 //if (imageSize > audioSize && imageSize > videoSize) {
                     $("#loading-container").css("display", "none");
                 //}

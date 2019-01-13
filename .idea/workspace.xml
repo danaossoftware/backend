@@ -66,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="2002" column="48" selection-start-line="2002" selection-start-column="27" selection-end-line="2002" selection-end-column="48" />
+            <state relative-caret-position="136">
+              <caret line="1998" column="26" lean-forward="true" selection-start-line="1998" selection-start-column="26" selection-end-line="1998" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -111,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/upload-img-with-id.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -128,7 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>explan</find>
       <find>var expl</find>
       <find>explanation</find>
       <find>penjelasan</find>
@@ -158,6 +157,7 @@
       <find>imageData =</find>
       <find>imagedata !=</find>
       <find>fillQuestionImageFile</find>
+      <find>$img</find>
     </findStrings>
     <replaceStrings>
       <replace>$results</replace>
@@ -365,12 +365,12 @@
       <workItem from="1546906818916" duration="2881000" />
       <workItem from="1546941637630" duration="731000" />
       <workItem from="1546951565417" duration="9000" />
-      <workItem from="1547343532350" duration="6212000" />
+      <workItem from="1547343532350" duration="6368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233615000" />
+    <option name="totallyTimeSpent" value="233771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -904,8 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="2002" column="48" selection-start-line="2002" selection-start-column="27" selection-end-line="2002" selection-end-column="48" />
+        <state relative-caret-position="136">
+          <caret line="1998" column="26" lean-forward="true" selection-start-line="1998" selection-start-column="26" selection-end-line="1998" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -947,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/upload-img-with-id.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
