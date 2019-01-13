@@ -2381,8 +2381,8 @@ function getDaftarBab() {
                 });
                 $(".bab-dialog-edit").on("click", function() {
                     var babItem = $(this).parent().parent();
-                    var daftarBab = babItem.parent();
-                    var index = daftarBab.children().index(babItem);
+                    var chapters = babItem.parent();
+                    var index = chapters.children().index(babItem);
                     $("#edit-bab-name").val(jsonData[index]["name"]);
                     $("#edit-bab-container").css("display", "block");
                     $("#edit-bab-save").on("click", function() {
@@ -2408,6 +2408,9 @@ function getDaftarBab() {
                     });
                 });
                 $(".bab-dialog-remove").on("click", function() {
+                    var babItem = $(this).parent().parent();
+                    var chapters = babItem.parent();
+                    var index = chapters.children().index(babItem);
                     $("#prompt-title").html("Hapus Bab");
                     $("#prompt-text").html("Apakah Anda yakin ingin menghapus bab ini?");
                     $("#prompt").css("display", "block");
