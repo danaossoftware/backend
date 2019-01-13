@@ -2008,6 +2008,7 @@ function fillQuestion() {
             contentType: false,
             cache: false,
             success: function(a) {
+                console.log(a);
                 //if (imageSize > audioSize && imageSize > videoSize) {
                     $("#loading-container").css("display", "none");
                 //}
