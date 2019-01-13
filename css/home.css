@@ -902,3 +902,15 @@ body {
     display: none;
     z-index: 1000;
 }
+
+.bab-dialog-item {
+    cursor: pointer;
+}
+
+.bab-dialog-item:hover {
+    background-color: #eeeeee;
+}
+
+.bab-dialog-item:active {
+    background-color: #dddddd;
+}

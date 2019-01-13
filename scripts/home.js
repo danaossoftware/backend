@@ -2349,12 +2349,10 @@ function getDaftarBab() {
                     dialog.setAttribute("class", "bab-dialog");
                     dialog.setAttribute("style", "display: none; position: absolute; right: 0; bottom: -80px; padding: 10px; background-color: white; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4); color: black; font-size: 20px;");
                     var edit = document.createElement("div");
-                    edit.setAttribute("class", "bab-dialog-edit");
-                    edit.setAttribute("style", "cursor: pointer;");
+                    edit.setAttribute("class", "bab-dialog-edit bab-dialog-item");
                     edit.innerHTML = "Edit";
                     var remove = document.createElement("div");
-                    remove.setAttribute("class", "bab-dialog-remove");
-                    remove.setAttribute("style", "cursor: pointer;");
+                    remove.setAttribute("class", "bab-dialog-remove bab-dialog-item");
                     remove.innerHTML = "Hapus";
                     dialog.appendChild(edit);
                     dialog.appendChild(remove);
@@ -2378,6 +2376,12 @@ function getDaftarBab() {
                     } else {
                         dialog.css("display", "none");
                     }
+                });
+                $(".bab-dialog-edit").on("click", function() {
+                    var dialog = $(this).parent();
+                    var babItem = dialog.parent();
+                    var index = babItem.children().index(dialog);
+                    alert(index);
                 });
             }
         },
