@@ -2358,7 +2358,7 @@ function getDaftarBab() {
                     div.appendChild(name);
                     div.appendChild(desc);
                     div.appendChild(menuContainer);
-                    div.appendChild(dialog);
+                    //div.appendChild(dialog);
                     document.getElementById("babs").appendChild(div);
                     items += ("" +
                         "<div class='bab-item'>" +

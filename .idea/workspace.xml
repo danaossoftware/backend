@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-    </list>
+    <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="391">
+              <caret line="2360" column="22" selection-start-line="2360" selection-start-column="22" selection-end-line="2360" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -162,7 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>font</find>
       <find>addquestion</find>
       <find>imageData</find>
       <find>imageData =</find>
@@ -192,6 +189,7 @@
       <find>mohave</find>
       <find>loadbab</find>
       <find>getCourses</find>
+      <find>getdaftarva</find>
     </findStrings>
     <replaceStrings>
       <replace>$results</replace>
@@ -285,8 +283,8 @@
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/css/global.css" />
         <option value="$PROJECT_DIR$/css/home.css" />
-        <option value="$PROJECT_DIR$/scripts/home.js" />
         <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/scripts/home.js" />
       </list>
     </option>
   </component>
@@ -411,12 +409,12 @@
       <workItem from="1547353558532" duration="1352000" />
       <workItem from="1547360714410" duration="3275000" />
       <workItem from="1547376478265" duration="184000" />
-      <workItem from="1547376927678" duration="2116000" />
+      <workItem from="1547376927678" duration="2142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241954000" />
+    <option name="totallyTimeSpent" value="241980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -895,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="391">
+          <caret line="2360" column="22" selection-start-line="2360" selection-start-column="22" selection-end-line="2360" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
