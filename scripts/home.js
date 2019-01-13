@@ -21,6 +21,8 @@ var audioSize = 0;
 var questionType = -1;
 var currentQuestion = 0;
 var fillQuestionImageFile;
+var coursesJSON;
+var edittedCourseID;
 
 $(document).ready(function () {
     setCheckBoxListener();
@@ -1628,6 +1630,7 @@ function loadCoursesIntoShowCoursesOption() {
                 // Error
             } else {
                 var courses = JSON.parse(a);
+                coursesJSON = courses;
                 for (var i = 0; i < courses.length; i++) {
                     var course = courses[i];
                     addCourseToShowCoursesOption(course.name, course.lecturer);
@@ -2654,7 +2657,14 @@ function cancelAddingCourse() {
 
 function setEditCourseListener() {
     $(".edit-course").on("click", function(a) {
-
+        var tr = $(this).parent().parent();
+        alert(tr.prop("tagName"));
+        var table = tr.parent();
+        var index = table.index(tr);
+        alert(index);
+        edittedCourseID = coursesJSON[index]["id"];
+        alert(edittedCourseID);
+        $('#edit-course-container').css("display", "flex");
     });
 }
 
@@ -2929,4 +2939,28 @@ function editQuestionSelectAudio() {
         fr.readAsDataURL($(this).prop("files")[0]);
     });
     $("#edit-question-select-audio").click();
+}
+
+function saveEdittedCourse() {
+    $("#edit-course-error").css("display", "none");
+    var name = $("#edit-course-name").val();
+    var lecturer = $("#edit-course-lecturer").val();
+    if (name == '' || lecturer == '') {
+        $("#edit-course-error").html("Masukkan nama atau nama pembimbing");
+        $("#edit-course-error").css("display", "block");
+        return;
+    }
+    $.ajax({
+        type: 'GET',
+        url: PHP_PATH+'edit-course.php',
+        data: {'id': edittedCourseID, 'name': name, 'lecturer': lecturer},
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            getCourses();
+        },
+        error: function(a, b, c) {
+            alert(b+' '+c);
+        }
+    });
 }

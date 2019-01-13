@@ -1096,19 +1096,18 @@
     </div>
 
     <!-- EDIT COURSE -->
-    <div id="edit-course-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center;">
+    <div id="edit-course-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center;">
         <div style="display: flex; flex-flow: row wrap; width: 500px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
             <div style="width: 100%; display: flex; justify-content: center; font-family: 'PalanquinBold', Arial; margin-top: 5px; font-size: 20px;">
                 EDIT MATA KULIAH
             </div>
-            <div style="width: 100%; height: 285px;">
+            <div style="width: 100%; height: 205px;">
                 <div style="margin-left: 20px;">Nama:</div>
                 <input class="input1" type="text" name="name" id="edit-course-name">
                 <div style="margin-left: 20px;">Nama pembimbing:</div>
                 <input class="input1" type="text" name="lecturer" id="edit-course-lecturer">
-                <div style="margin-left: 20px;">Nomor Handphone:</div>
                 <div id="edit-course-error" class="error" style="margin-top: 0; margin-left: 20px;">&nbsp;</div>
-                <button id="save-course" class="blue-button"
+                <button onclick="saveEdittedCourse()" id="save-course" class="blue-button"
                         style="width: 91%; margin-left: 20px; margin-right: 20px; margin-top: 10px;">Simpan
                 </button>
             </div>
