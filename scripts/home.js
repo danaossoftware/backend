@@ -2340,7 +2340,7 @@ function getDaftarBab() {
                     menu.setAttribute("class", "menu");
                     menu.setAttribute("width", "50px");
                     menu.setAttribute("height", "50px");
-                    menu.setAttribute("style", "display: flex; justify-content: center; align-items: center;");
+                    menu.setAttribute("style", "background-color: red; display: flex; justify-content: center; align-items: center;");
                     var menuImg = document.createElement("img");
                     menuImg.setAttribute("src", "img/menu.png");
                     menuImg.setAttribute("width", "3px");
