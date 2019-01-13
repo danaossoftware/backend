@@ -4,9 +4,9 @@
         <website>ilatih.com</website>
         <host>ilatih.com</host>
         <port>80</port>
-        <dbuser>root</dbuser>
-        <dbpass></dbpass>
-        <dbname>quiz</dbname>
+        <dbuser>u372521303_quiz</dbuser>
+        <dbpass>HelloWorld123</dbpass>
+        <dbname>u372521303_quiz</dbname>
     </mysql>
     <admin>
         <email>ligaligo12346@gmail.com</email>
