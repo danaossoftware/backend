@@ -2338,8 +2338,8 @@ function getDaftarBab() {
                     menuContainer.setAttribute("style", "width: 100%; height: 100%; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; left: 0; top: 0;");
                     var menu = document.createElement("img");
                     menu.setAttribute("src", "img/menu.png");
-                    menu.setAttribute("width", "10px");
-                    menu.setAttribute("height", "35px");
+                    menu.setAttribute("width", "5px");
+                    menu.setAttribute("height", "25px");
                     menu.setAttribute("style", "margin-right: 10px; margin-bottom: 10px;");
                     menuContainer.appendChild(menu);
                     div.appendChild(img);
