@@ -2004,6 +2004,8 @@ function fillQuestion() {
             type: 'POST',
             url: PHP_PATH+'upload-img-with-id.php',
             data: fd2,
+            processData: false,
+            contentType: false,
             cache: false,
             success: function(a) {
                 console.log(a);
