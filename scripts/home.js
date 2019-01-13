@@ -1997,6 +1997,8 @@ function fillQuestion() {
     var videoURL = "";
     var audioURL = "";
     if (imageData != '') {
+        alert(fillQuestionImageFile);
+        return;
         imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
         var fd2 = new FormData();
         fd2.append("id", imageID);
@@ -2005,6 +2007,7 @@ function fillQuestion() {
             type: 'POST',
             url: PHP_PATH+'upload-img-with-id.php',
             data: fd2,
+            enctype: "multipart/form-data",
             processData: false,
             contentType: false,
             cache: false,
