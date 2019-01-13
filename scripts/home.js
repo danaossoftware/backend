@@ -2001,11 +2001,9 @@ function fillQuestion() {
         fd2.append("id", imageID);
         fd2.append("img_data", imageData);
         $.ajax({
-            type: 'POST',
+            type: 'GET',
             url: PHP_PATH+'upload-img-with-id.php',
-            data: fd2,
-            processData: false,
-            contentType: false,
+            dataType: 'text',
             cache: false,
             success: function(a) {
                 console.log(a);
