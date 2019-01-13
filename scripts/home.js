@@ -2658,9 +2658,8 @@ function cancelAddingCourse() {
 function setEditCourseListener() {
     $(".edit-course").on("click", function(a) {
         var tr = $(this).parent().parent();
-        alert(tr.prop("tagName"));
         var table = tr.parent();
-        var index = table.index(tr);
+        var index = table.children().index(tr);
         alert(index);
         edittedCourseID = coursesJSON[index]["id"];
         alert(edittedCourseID);
