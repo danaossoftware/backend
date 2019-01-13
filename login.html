@@ -7,15 +7,8 @@
         const PHP_PATH = "http://ilatih.com/backend/scripts/";
 
         $(document).ready(function() {
-            $("#login-btn").on({
-                mouseenter: function () {
-                    $("#login-btn-bg").fadeIn(300);
-                }
-            });
-            $("#login-btn-bg").on({
-                mouseleave: function() {
-                    $("#login-btn-bg").fadeOut(300);
-                }
+            $("#login-btn").on("click", function() {
+                $("#login-btn").css("background-image", "linear-gradient(to bottom, #4db5fe, #1790f3)");
             });
         });
 
