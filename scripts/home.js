@@ -2347,7 +2347,7 @@ function getDaftarBab() {
                     menuContainer.appendChild(menu);
                     var dialog = document.createElement("div");
                     dialog.setAttribute("class", "bab-dialog");
-                    dialog.setAttribute("style", "display: none; position: absolute; right: 0; bottom: 10px; padding: 10px; background-color: white; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4); color: black; font-size: 20px;");
+                    dialog.setAttribute("style", "display: none; position: absolute; right: 0; bottom: -80px; padding: 10px; background-color: white; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4); color: black; font-size: 20px;");
                     var edit = document.createElement("div");
                     edit.setAttribute("class", "bab-dialog-edit");
                     edit.setAttribute("style", "cursor: pointer;");
@@ -2370,9 +2370,6 @@ function getDaftarBab() {
                         "</div>" +
                         "");
                 }
-                $(".bab-item").on("click", function() {
-                    $(this).find(".bab-dialog").css("display", "none");
-                });
                 $(".menu").on("click", function() {
                     var babItem = $(this).parent().parent();
                     var dialog = babItem.find(".bab-dialog");
