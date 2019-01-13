@@ -2404,7 +2404,7 @@ function getDaftarBab() {
                         });
                     });
                 });
-                $(".bab-dialog.remove").on("click", function() {
+                $(".bab-dialog-remove").on("click", function() {
                     $("#prompt-title").html("Hapus Bab");
                     $("#prompt-text").html("Apakah Anda yakin ingin menghapus bab ini?");
                     $("#prompt").css("display", "block");
