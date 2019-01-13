@@ -2949,6 +2949,7 @@ function saveEdittedCourse() {
         $("#edit-course-error").css("display", "block");
         return;
     }
+    alert(lecturer);
     $.ajax({
         type: 'GET',
         url: PHP_PATH+'edit-course.php',
@@ -2956,6 +2957,7 @@ function saveEdittedCourse() {
         dataType: 'text',
         cache: false,
         success: function(a) {
+            alert(a);
             $("#edit-course-container").css("display", "none");
             getCourses();
         },
