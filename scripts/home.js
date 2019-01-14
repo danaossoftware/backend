@@ -1497,8 +1497,11 @@ function editQuestion(btnEditQuestion) {
         var videoFileName = "";
         var audioFileName = "";
         if (pictureFile != null && pictureFile != 'noupdate') {
+            alert("This line");
             imgFileName = guid();
             pictureURL = "http://ilatih.com/backend/userdata/imgs/"+imgFileName;
+        } else {
+            alert("This line 2");
         }
         if (videoFile != null && videoFile != 'noupdate') {
             videoFileName = guid();
