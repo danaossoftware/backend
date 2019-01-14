@@ -1724,9 +1724,9 @@ function addQuestion() {
     $("#add-question-error").css("display", "none");
     $("#fill-question-img").css("background-image", "url('img/no-img.png')");
     $("#fill-question-video-source").attr("src", "");
-    $("#fill-question-video").load();
+    $("#fill-question-video")[0].load();
     $("#fill-question-audio-source").attr("src", "");
-    $("#fill-question-audio").load();
+    $("#fill-question-audio")[0].load();
     $("#add-question-reason").val("");
     $("#choose-question-type").html("Pilih Tipe soal");
     $("#answer-a").val("");
