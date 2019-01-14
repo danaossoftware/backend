@@ -1441,6 +1441,7 @@ function editQuestion(btnEditQuestion) {
         $("#edit-question-audio-source").attr("src", "");
         $("#edit-question-audio")[0].load();
     }
+    alert(question.reason);
     $("#edit-question-reason").val(question.reason);
     var splittedAnswer = answers.split("@");
     if (type == 'pilihan') {
