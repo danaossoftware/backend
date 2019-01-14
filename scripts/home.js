@@ -1722,6 +1722,21 @@ function cancelAddingQuestion() {
 function addQuestion() {
     $("#add-question-dialog").css("height", "225px");
     $("#add-question-error").css("display", "none");
+    $("#fill-question-img").css("background-image", "url('img/no-img.png')");
+    $("#fill-question-video-source").attr("src", "");
+    $("#fill-question-video").load();
+    $("#fill-question-audio-source").attr("src", "");
+    $("#fill-question-audio").load();
+    $("#add-question-reason").val("");
+    $("#choose-question-type").html("Pilih Tipe soal");
+    $("#answer-a").val("");
+    $("#answer-b").val("");
+    $("#answer-c").val("");
+    $("#answer-d").val("");
+    $("#isian-a").val("");
+    $("#isian-b").val("");
+    $("#isian-c").val("");
+    $("#add-question-content").val("");
     if (courseIndex == -1) {
         $("#add-question-dialog").css("height", "250px");
         $("#add-question-error").html("Mohon pilih mata kuliah");
@@ -2043,7 +2058,7 @@ function fillQuestion() {
             success: function(a) {
                 console.log(a);
                 //if (imageSize > audioSize && imageSize > videoSize) {
-                    $("#loading-container").css("display", "none");
+                $("#loading-container").css("display", "none");
                 //}
             },
             error: function(a, b, c) {
@@ -2065,7 +2080,7 @@ function fillQuestion() {
             cache: false,
             success: function(a) {
                 //if (videoSize > imageSize && videoSize > audioSize) {
-                    $("#loading-container").css("display", "none");
+                $("#loading-container").css("display", "none");
                 //}
             },
             error: function(a, b, c) {
@@ -2087,7 +2102,7 @@ function fillQuestion() {
             cache: false,
             success: function(a) {
                 //if (audioSize > imageSize && audioSize > videoSize) {
-                    $("#loading-container").css("display", "none");
+                $("#loading-container").css("display", "none");
                 //}
             },
             error: function(a, b, c) {
@@ -2308,6 +2323,7 @@ function addBab(name0, questionsCount, imgURL) {
     div.appendChild(menuContainer);
     div.appendChild(dialog);
     document.getElementById("babs").appendChild(div);
+    getDaftarBab();
 }
 
 function getDaftarBab() {
@@ -2317,12 +2333,14 @@ function getDaftarBab() {
         url: PHP_PATH + 'get-all-babs.php',
         dataType: 'text',
         cache: false,
+        async: false,
         success: function (a) {
             if (a < 0) {
                 // Error
             } else {
                 var jsonData = JSON.parse(a);
                 var items = "";
+                $("#babs").find("*").remove();
                 for (var i = 0; i < jsonData.length; i++) {
                     var bab = jsonData[i];
                     var div = document.createElement("div");
@@ -2450,6 +2468,7 @@ function getDaftarBab() {
                             dataType: 'text',
                             cache: false,
                             success: function(a) {
+                                $("#prompt").css("display", "none");
                                 getDaftarBab();
                             }
                         });
