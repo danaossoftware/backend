@@ -1,4 +1,4 @@
-const PHP_PATH = "http://ilatih.com/backend/scripts/";
+const PHP_URL = "http://ilatih.com/backend/scripts/";
 var lecturers = {};
 var courseIndex = -1;
 var courseName = "";
@@ -196,7 +196,7 @@ $(document).ready(function () {
             formData.append('img_data', imgData);
             $.ajax({
                 type: 'POST',
-                url: PHP_PATH + 'upload-img.php',
+                url: PHP_URL + 'upload-img.php',
                 data: formData,
                 processData: false,
                 contentType: false,
@@ -297,7 +297,7 @@ $(document).ready(function () {
     $(".log-out").on("click", function() {
         $.ajax({
             type: 'GET',
-            url: PHP_PATH+'logout.php',
+            url: PHP_URL+'logout.php',
             dataType: 'text',
             cache: false,
             success: function(a) {
@@ -310,7 +310,7 @@ $(document).ready(function () {
     });
     $.ajax({
         type: 'GET',
-        url: PHP_PATH+'get-session.php',
+        url: PHP_URL+'get-session.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -438,7 +438,7 @@ function loadSettings() {
                 fd.append("rules", rules);
                 $.ajax({
                     type: 'POST',
-                    url: PHP_PATH+'save-settings.php',
+                    url: PHP_URL+'save-settings.php',
                     data: fd,
                     processData: false,
                     contentType: false,
@@ -464,7 +464,7 @@ function getAdmins() {
     $("#admins").find("tbody").find("*").remove();
     $.ajax({
         type: 'GET',
-        url: PHP_PATH + 'get-admins.php',
+        url: PHP_URL + 'get-admins.php',
         dataType: 'text',
         cache: false,
         success: function (a) {
@@ -516,7 +516,7 @@ function getUsers() {
     $("#users").find("tbody").find("*").remove();
     $.ajax({
         type: 'GET',
-        url: PHP_PATH + 'get-users.php',
+        url: PHP_URL + 'get-users.php',
         dataType: 'text',
         cache: false,
         success: function (a) {
@@ -594,7 +594,7 @@ function deleteUsers() {
                     $.ajax({
                         type: 'GET',
                         dataType: 'text',
-                        url: PHP_PATH + 'delete-user.php',
+                        url: PHP_URL + 'delete-user.php',
                         data: {'id': usersJSON[index].id},
                         cache: false,
                         success: function (a) {
@@ -740,7 +740,7 @@ function editUser(index) {
         var userId = usersJSON[index].id;
         $.ajax({
             type: 'GET',
-            url: PHP_PATH + 'update-user.php',
+            url: PHP_URL + 'update-user.php',
             dataType: 'text',
             data: {'id': userId, 'name': name, 'phone': phone, 'password': password},
             cache: false,
@@ -772,7 +772,7 @@ function editUser(index) {
             $.ajax({
                 type: 'GET',
                 dataType: 'text',
-                url: PHP_PATH + 'delete-user.php',
+                url: PHP_URL + 'delete-user.php',
                 data: {'id': userId},
                 cache: false,
                 success: function (a) {
@@ -828,7 +828,7 @@ function addUser() {
         }
         $.ajax({
             type: 'GET',
-            url: PHP_PATH + 'add-user.php',
+            url: PHP_URL + 'add-user.php',
             dataType: 'text',
             data: {'name': name, 'email': email, 'password': password, 'phone': phone},
             cache: false,
@@ -884,7 +884,7 @@ function addAdmin() {
         }
         $.ajax({
             type: 'GET',
-            url: PHP_PATH + 'add-admin.php',
+            url: PHP_URL + 'add-admin.php',
             dataType: 'text',
             data: {'email': email, 'password': password},
             cache: false,
@@ -939,7 +939,7 @@ function confirmPassword(index) {
     }
     $.ajax({
         type: 'GET',
-        url: PHP_PATH + 'get-current-account.php',
+        url: PHP_URL + 'get-current-account.php',
         dataType: 'text',
         cache: false,
         success: function (a) {
@@ -968,7 +968,7 @@ function confirmPassword(index) {
                         var adminId = adminsJSON[index].id;
                         $.ajax({
                             type: 'GET',
-                            url: PHP_PATH + 'update-admin-password.php',
+                            url: PHP_URL + 'update-admin-password.php',
                             dataType: 'text',
                             data: {'id': adminId, 'password': password},
                             cache: false,
@@ -976,7 +976,7 @@ function confirmPassword(index) {
                                 if (adminId == cred.id) {
                                     $.ajax({
                                         type: 'GET',
-                                        url: PHP_PATH + 'update-session.php',
+                                        url: PHP_URL + 'update-session.php',
                                         data: {'password': password},
                                         dataType: 'text',
                                         cache: false,
@@ -1014,7 +1014,7 @@ function confirmPassword(index) {
                             $.ajax({
                                 type: 'GET',
                                 dataType: 'text',
-                                url: PHP_PATH + 'delete-admin.php',
+                                url: PHP_URL + 'delete-admin.php',
                                 data: {'id': adminId},
                                 cache: false,
                                 success: function (a) {
@@ -1090,7 +1090,7 @@ function deleteAdmins() {
                         $.ajax({
                             type: 'GET',
                             dataType: 'text',
-                            url: PHP_PATH + 'delete-admin.php',
+                            url: PHP_URL + 'delete-admin.php',
                             data: {'id': adminsJSON[index].id},
                             cache: false,
                             success: function (a) {
@@ -1200,7 +1200,7 @@ function getQuestions() {
         type: 'GET',
         dataType: 'text',
         cache: false,
-        url: PHP_PATH + 'get-questions.php',
+        url: PHP_URL + 'get-questions.php',
         success: function (a) {
             if (a < 0) {
                 // Error
@@ -1510,7 +1510,7 @@ function editQuestion(btnEditQuestion) {
             fd.append("video_url", videoURL);
             $.ajax({
                 type: 'POST',
-                url: PHP_PATH + 'update-question.php',
+                url: PHP_URL + 'update-question.php',
                 data: fd,
                 contentType: false,
                 processData: false,
@@ -1647,7 +1647,7 @@ function loadCoursesIntoShowCoursesOption() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH + 'get-courses.php',
+        url: PHP_URL + 'get-courses.php',
         cache: false,
         success: function (a) {
             if (a < 0) {
@@ -1679,7 +1679,7 @@ function loadCourses2() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH + 'get-courses.php',
+        url: PHP_URL + 'get-courses.php',
         cache: false,
         success: function (a) {
             if (a < 0) {
@@ -1854,7 +1854,7 @@ function saveEdittedQuestion() {
         fd2.append("img_data", imageData);
         $.ajax({
             type: 'POST',
-            url: PHP_PATH+'upload-img-with-id.php',
+            url: PHP_URL+'upload-img-with-id.php',
             data: fd2,
             processData: false,
             contentType: false,
@@ -1876,7 +1876,7 @@ function saveEdittedQuestion() {
         fd3.append("video_data", videoData);
         $.ajax({
             type: 'POST',
-            url: PHP_PATH+'upload-video-with-id.php',
+            url: PHP_URL+'upload-video-with-id.php',
             processData: false,
             contentType: false,
             data: fd3,
@@ -1898,7 +1898,7 @@ function saveEdittedQuestion() {
         fd4.append("audio_data", audioData);
         $.ajax({
             type: 'POST',
-            url: PHP_PATH+'upload-audio-with-id.php',
+            url: PHP_URL+'upload-audio-with-id.php',
             processData: false,
             contentType: false,
             data: fd4,
@@ -1934,7 +1934,7 @@ function saveEdittedQuestion() {
     }
     $.ajax({
         type: 'POST',
-        url: PHP_PATH + 'save-editted-question.php',
+        url: PHP_URL + 'save-editted-question.php',
         data: fd,
         processData: false,
         contentType: false,
@@ -2037,7 +2037,7 @@ function fillQuestion() {
         fd2.append("img_file", fillQuestionImageFile);
         $.ajax({
             type: 'POST',
-            url: PHP_PATH+'upload-img-with-id.php',
+            url: PHP_URL+'upload-img-with-id.php',
             data: fd2,
             enctype: "multipart/form-data",
             processData: false,
@@ -2061,7 +2061,7 @@ function fillQuestion() {
         fd3.append("video_data", videoData);
         $.ajax({
             type: 'POST',
-            url: PHP_PATH+'upload-video-with-id.php',
+            url: PHP_URL+'upload-video-with-id.php',
             processData: false,
             contentType: false,
             data: fd3,
@@ -2083,7 +2083,7 @@ function fillQuestion() {
         fd4.append("audio_data", audioData);
         $.ajax({
             type: 'POST',
-            url: PHP_PATH+'upload-audio-with-id.php',
+            url: PHP_URL+'upload-audio-with-id.php',
             processData: false,
             contentType: false,
             data: fd4,
@@ -2116,7 +2116,7 @@ function fillQuestion() {
     $.ajax({
         type: 'POST',
         data: fd,
-        url: PHP_PATH + 'add-question.php',
+        url: PHP_URL + 'add-question.php',
         processData: false,
         contentType: false,
         cache: false,
@@ -2144,7 +2144,7 @@ function loadBabs(courseName) {
     babName = "";
     $.ajax({
         type: 'GET',
-        url: PHP_PATH + 'get-bab.php',
+        url: PHP_URL + 'get-bab.php',
         dataType: 'text',
         data: {'course_name': courseName},
         cache: false,
@@ -2234,7 +2234,7 @@ function addNewBab() {
     }
     $.ajax({
         type: 'GET',
-        url: PHP_PATH + 'add-bab.php',
+        url: PHP_URL + 'add-bab.php',
         data: {'name': name, 'course_name': courseName, 'img_url': babImgURL},
         dataType: 'text',
         success: function (a) {
@@ -2318,7 +2318,7 @@ function getDaftarBab() {
     $("#babs").find("*").remove();
     $.ajax({
         type: 'GET',
-        url: PHP_PATH + 'get-all-babs.php',
+        url: PHP_URL + 'get-all-babs.php',
         dataType: 'text',
         cache: false,
         async: false,
@@ -2350,7 +2350,7 @@ function getDaftarBab() {
                     desc.innerHTML = "0 soal";
                     $.ajax({
                         type: 'GET',
-                        url: PHP_PATH + "get-soal-by-bab.php",
+                        url: PHP_URL + "get-soal-by-bab.php",
                         data: {'bab_id': bab.id},
                         dataType: 'text',
                         cache: false,
@@ -2425,7 +2425,7 @@ function getDaftarBab() {
                         }
                         $.ajax({
                             type: 'GET',
-                            url: PHP_PATH+'edit-bab.php',
+                            url: PHP_URL+'edit-bab.php',
                             data: {'id': jsonData[i]["id"], "name": jsonData[i]["name"]},
                             dataType: 'text',
                             cache: false,
@@ -2451,7 +2451,7 @@ function getDaftarBab() {
                     $("#prompt-yes").on("click", function() {
                         $.ajax({
                             type: 'GET',
-                            url: PHP_PATH+'remove-bab.php',
+                            url: PHP_URL+'remove-bab.php',
                             data: {'id': jsonData[index]["id"]},
                             dataType: 'text',
                             cache: false,
@@ -2523,7 +2523,7 @@ function deleteCourses() {
                         $.ajax({
                             type: 'GET',
                             dataType: 'text',
-                            url: PHP_PATH + 'delete-course.php',
+                            url: PHP_URL + 'delete-course.php',
                             data: {'name': lecturers[index].name},
                             cache: false,
                             success: function (a) {
@@ -2638,7 +2638,7 @@ function getCourses() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH + 'get-courses.php',
+        url: PHP_URL + 'get-courses.php',
         success: function (response) {
             console.log(response);
             var courses = JSON.parse(response);
@@ -2749,7 +2749,7 @@ function addNewCourse() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH + 'check-course-availability.php',
+        url: PHP_URL + 'check-course-availability.php',
         data: {'name': courseName},
         cache: false,
         success: function (r) {
@@ -2758,7 +2758,7 @@ function addNewCourse() {
                 $.ajax({
                     type: 'GET',
                     dataType: 'text',
-                    url: PHP_PATH + 'add-course.php',
+                    url: PHP_URL + 'add-course.php',
                     data: {'name': courseName, 'lecturer': lecturerName},
                     cache: false,
                     success: function (r) {
@@ -2835,7 +2835,7 @@ function setDeleteCourseListener() {
             $.ajax({
                 type: 'GET',
                 dataType: 'text',
-                url: PHP_PATH + 'delete-course.php',
+                url: PHP_URL + 'delete-course.php',
                 data: {'name': courseName},
                 cache: false,
                 success: function (a) {
@@ -2854,7 +2854,7 @@ function backupCourses() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH + 'save-courses.php',
+        url: PHP_URL + 'save-courses.php',
         data: {'filename': 'courses.json'},
         cache: false,
         success: function (a) {
@@ -2878,7 +2878,7 @@ function uploadCourses() {
         fr.onload = function () {
             var jsonData = fr.result;
             $.ajax({
-                url: PHP_PATH + 'restore-courses.php',
+                url: PHP_URL + 'restore-courses.php',
                 type: 'POST',
                 dataType: 'text',
                 data: {'data': jsonData},
@@ -3101,7 +3101,7 @@ function saveEdittedCourse() {
     }
     $.ajax({
         type: 'GET',
-        url: PHP_PATH+'edit-course.php',
+        url: PHP_URL+'edit-course.php',
         data: {'id': edittedCourseID, 'name': name, 'lecturer': lecturer},
         dataType: 'text',
         cache: false,
@@ -3111,6 +3111,20 @@ function saveEdittedCourse() {
         },
         error: function(a, b, c) {
             alert(b+' '+c);
+        }
+    });
+}
+
+function deleteQuestion() {
+    var question = questionsJSON[currentQuestion];
+    $.ajax({
+        type: 'GET',
+        url: PHP_URL+'delete-question.php',
+        data: {'id': question.id},
+        dataType: 'text',
+        success: function(a) {
+            $("#edit-question-dialog-ctr").css("display", "none");
+            getQuestions();
         }
     });
 }

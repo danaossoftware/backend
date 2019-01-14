@@ -1,4 +1,4 @@
-const PHP_PATH = "http://ilatih.com/backend/scripts/";
+const PHP_URL = "http://ilatih.com/backend/scripts/";
 var lecturers = {};
 var courseIndex = -1;
 var courseName = "";
@@ -86,7 +86,7 @@ $(document).ready(function () {
             formData.append('img_data', imgData);
             $.ajax({
                 type: 'POST',
-                url: PHP_PATH+'upload-img.php',
+                url: PHP_URL+'upload-img.php',
                 data: formData,
                 processData: false,
                 contentType: false,
@@ -112,7 +112,7 @@ function loadCoursesIntoShowCoursesOption() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH+'get-courses.php',
+        url: PHP_URL+'get-courses.php',
         cache: false,
         success: function(a) {
             if (a < 0) {
@@ -143,7 +143,7 @@ function loadCourses2() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH+'get-courses.php',
+        url: PHP_URL+'get-courses.php',
         cache: false,
         success: function(a) {
             if (a < 0) {
@@ -197,7 +197,7 @@ function loadBabs() {
     babName = "";
     $.ajax({
         type: 'GET',
-        url: PHP_PATH+'get-bab.php',
+        url: PHP_URL+'get-bab.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -286,7 +286,7 @@ function addNewBab() {
     }
     $.ajax({
         type: 'GET',
-        url: PHP_PATH+'add-bab.php',
+        url: PHP_URL+'add-bab.php',
         data: {'name': name, 'course_name': courseName, 'img_url': babImgURL},
         dataType: 'text',
         success: function(a) {
@@ -342,7 +342,7 @@ function getDaftarBab() {
     $("#babs").find("*").remove();
     $.ajax({
         type: 'GET',
-        url: PHP_PATH+'get-bab.php',
+        url: PHP_URL+'get-bab.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -371,7 +371,7 @@ function getDaftarBab() {
                     desc.innerHTML = "0 soal";
                     $.ajax({
                         type: 'GET',
-                        url: PHP_PATH+"get-soal-by-bab.php",
+                        url: PHP_URL+"get-soal-by-bab.php",
                         data: {'bab_id': bab.id},
                         dataType: 'text',
                         cache: false,
@@ -425,7 +425,7 @@ function setDeleteCourseListener() {
                         $.ajax({
                             type: 'GET',
                             dataType: 'text',
-                            url: PHP_PATH+'delete-course.php',
+                            url: PHP_URL+'delete-course.php',
                             data: {'name': lecturers[index].name},
                             cache: false,
                             success: function (a) {
@@ -538,7 +538,7 @@ function getCourses() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH+'get-courses.php',
+        url: PHP_URL+'get-courses.php',
         success: function (response) {
             console.log(response);
             var courses = JSON.parse(response);
@@ -646,7 +646,7 @@ function addNewCourse() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH+'check-course-availability.php',
+        url: PHP_URL+'check-course-availability.php',
         data: {'name': courseName},
         cache: false,
         success: function (r) {
@@ -655,7 +655,7 @@ function addNewCourse() {
                 $.ajax({
                     type: 'GET',
                     dataType: 'text',
-                    url: PHP_PATH+'add-course.php',
+                    url: PHP_URL+'add-course.php',
                     data: {'name': courseName, 'lecturer': lecturerName},
                     cache: false,
                     success: function (r) {
@@ -715,7 +715,7 @@ function setDeleteCourseListener() {
             $.ajax({
                 type: 'GET',
                 dataType: 'text',
-                url: PHP_PATH+'delete-course.php',
+                url: PHP_URL+'delete-course.php',
                 data: {'name': courseName},
                 cache: false,
                 success: function (a) {
@@ -734,7 +734,7 @@ function backupCourses() {
     $.ajax({
         type: 'GET',
         dataType: 'text',
-        url: PHP_PATH+'save-courses.php',
+        url: PHP_URL+'save-courses.php',
         data: {'filename': 'courses.json'},
         cache: false,
         success: function(a) {
@@ -758,7 +758,7 @@ function uploadCourses() {
         fr.onload = function() {
             var jsonData = fr.result;
             $.ajax({
-                url: PHP_PATH+'restore-courses.php',
+                url: PHP_URL+'restore-courses.php',
                 type: 'POST',
                 dataType: 'text',
                 data: {'data': jsonData},
