@@ -1520,6 +1520,7 @@ function editQuestion(btnEditQuestion) {
                 contentType: false,
                 cache: false,
                 success: function (a) {
+                    alert(a);
                     pictureFile = null;
                 }
             });
