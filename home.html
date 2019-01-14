@@ -883,10 +883,19 @@
                             </div>
                         </div>
                     </div>
-                    <div style="width: 500px; display: flex; flex-flow: column nowrap;">
-                        <div style="margin-left: 20px; font-family: 'PalanquinBold', Arial; font-size: 17px;">Soal:
+                    <div style="width: 700px; display: flex; flex-flow: column nowrap;">
+                        <div style="width: 100%; display: flex; flex-flow: row nowrap;">
+                            <div style="width: 50%; display: flex; flex-flow: column nowrap;">
+                                <div style="margin-left: 20px; font-family: 'PalanquinBold', Arial; font-size: 17px;">Soal:
+                                </div>
+                                <textarea spellcheck="false" id="edit-question-content" class="large-input">&nbsp;</textarea>
+                            </div>
+                            <div style="width: 50%; display: flex; flex-flow: column nowrap;">
+                                <div style="margin-left: 20px; font-family: 'PalanquinBold', Arial; font-size: 17px;">Alasan:
+                                </div>
+                                <textarea spellcheck="false" id="edit-question-reason" class="large-input">&nbsp;</textarea>
+                            </div>
                         </div>
-                        <textarea spellcheck="false" id="edit-question-content" class="large-input">&nbsp;</textarea>
                         <div style="font-family: 'PalanquinBold', Arial; margin-left: 20px;">Tipe soal:</div>
                         <div style="width: 100%; position: relative;">
                             <div onclick="showEditQuestionTypeOptions()" id="edit-question-choose-question-type"
