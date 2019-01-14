@@ -1562,6 +1562,8 @@ function editQuestion(btnEditQuestion) {
         answerD = $("#edit-question-d").val();
         answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
         var reason = $("#edit-question-reason").val();
+        alert(courses[courseIndex].bab[babIndex].questions[questionIndex].id);
+        alert(pictureURL);
         fd.append("answers", answers);
         fd.append("correct_answer", correctAnswer);
         fd.append("question_id", courses[courseIndex].bab[babIndex].questions[questionIndex].id);

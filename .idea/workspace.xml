@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="1424" column="22" selection-start-line="1424" selection-start-column="22" selection-end-line="1424" selection-end-column="22" />
+            <state relative-caret-position="135">
+              <caret line="1564" column="78" selection-start-line="1564" selection-start-column="78" selection-end-line="1564" selection-end-column="78" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -214,8 +214,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get-courses</find>
-      <find>getquestions</find>
       <find>questionsJSON</find>
       <find>coursesJSON</find>
       <find>questionsjson</find>
@@ -244,6 +242,8 @@
       <find>video</find>
       <find>img</find>
       <find>pictureURL</find>
+      <find>pictureURL = ''</find>
+      <find>pictureURL = &quot;&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -449,12 +449,12 @@
       <workItem from="1547471210370" duration="634000" />
       <workItem from="1547476232232" duration="196000" />
       <workItem from="1547476580372" duration="99000" />
-      <workItem from="1547482657435" duration="4959000" />
+      <workItem from="1547482657435" duration="5035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253111000" />
+    <option name="totallyTimeSpent" value="253187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -954,8 +954,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="1424" column="22" selection-start-line="1424" selection-start-column="22" selection-end-line="1424" selection-end-column="22" />
+        <state relative-caret-position="135">
+          <caret line="1564" column="78" selection-start-line="1564" selection-start-column="78" selection-end-line="1564" selection-end-column="78" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
