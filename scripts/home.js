@@ -2262,6 +2262,7 @@ function addNewBab() {
 function addBab(name0, questionsCount, imgURL) {
     var div = document.createElement("div");
     div.setAttribute("class", "bab-item");
+    div.setAttribute("style", "position: relative;");
     var img = document.createElement("img");
     if (imgURL !== '') {
         img.src = imgURL;
@@ -2277,9 +2278,35 @@ function addBab(name0, questionsCount, imgURL) {
     var desc = document.createElement("div");
     desc.innerHTML = "" + questionsCount + " soal";
     desc.setAttribute("style", "font-size: 10px; color: #888888; margin-left: 10px; margin-right: 10px; margin-bottom: 10px;");
+    var menuContainer = document.createElement("div");
+    menuContainer.setAttribute("style", "width: 100%; height: 100%; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; left: 0; top: 0;");
+    var menu = document.createElement("div");
+    menu.setAttribute("class", "menu");
+    menu.setAttribute("style", "width: 30px; height: 50px; red; display: flex; justify-content: center; align-items: center;");
+    var menuImg = document.createElement("img");
+    menuImg.setAttribute("src", "img/menu.png");
+    menuImg.setAttribute("width", "3px");
+    menuImg.setAttribute("height", "15px");
+    menu.appendChild(menuImg);
+    menuContainer.appendChild(menu);
+    var dialog = document.createElement("div");
+    dialog.setAttribute("class", "bab-dialog");
+    dialog.setAttribute("style", "display: none; position: absolute; right: 0; bottom: -80px; background-color: white; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4); color: black; font-size: 20px;");
+    var edit = document.createElement("div");
+    edit.setAttribute("class", "bab-dialog-edit bab-dialog-item");
+    edit.setAttribute("style", "margin-top: 10px;");
+    edit.innerHTML = "Edit";
+    var remove = document.createElement("div");
+    remove.setAttribute("class", "bab-dialog-remove bab-dialog-item");
+    remove.setAttribute("style", "margin-bottom: 10px;");
+    remove.innerHTML = "Hapus";
+    dialog.appendChild(edit);
+    dialog.appendChild(remove);
     div.appendChild(img);
     div.appendChild(name);
     div.appendChild(desc);
+    div.appendChild(menuContainer);
+    div.appendChild(dialog);
     document.getElementById("babs").appendChild(div);
 }
 
@@ -2397,6 +2424,7 @@ function getDaftarBab() {
                             dataType: 'text',
                             cache: false,
                             success: function(a) {
+                                $("#prompt").css("display", "none");
                                 getDaftarBab();
                             },
                             error: function(a, b, c) {
