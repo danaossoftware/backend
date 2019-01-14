@@ -1442,6 +1442,7 @@ function editQuestion(btnEditQuestion) {
         $("#edit-question-audio-source").attr("src", "");
         $("#edit-question-audio")[0].load();
     }
+    $("#edit-question-reason").val(question.reason);
     var splittedAnswer = answers.split("@");
     if (type == 'pilihan') {
         questionType = 0;
@@ -1505,11 +1506,13 @@ function editQuestion(btnEditQuestion) {
             answerC = $("#edit-question-c").val();
             answerD = $("#edit-question-d").val();
             answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
+            var reason = $("#edit-question-reason").val();
             fd.append("answers", answers);
             fd.append("correct_answer", correctAnswer);
             fd.append("question_id", courses[courseIndex].bab[babIndex].questions[questionIndex].id);
             fd.append("picture_url", pictureURL);
             fd.append("video_url", videoURL);
+            fd.append("reason", reason);
             $.ajax({
                 type: 'POST',
                 url: PHP_URL + 'update-question.php',
