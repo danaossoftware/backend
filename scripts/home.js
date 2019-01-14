@@ -22,6 +22,7 @@ var currentQuestion = 0;
 var fillQuestionImageFile;
 var coursesJSON;
 var edittedCourseID;
+var currentEdittedQuestion;
 
 $(document).ready(function () {
     setCheckBoxListener();
@@ -1410,8 +1411,10 @@ function editQuestion(btnEditQuestion) {
     var questionIndex = id.substr(a, b - a);
     questionIndex = questionIndex.trim();
     currentQuestion = questionIndex;
+
     var courses = coursesJSON;
     var question = courses[courseIndex].bab[babIndex].questions[questionIndex].question;
+    currentEdittedQuestion = question;
     var answers = courses[courseIndex].bab[babIndex].questions[questionIndex].answers;
     var type = courses[courseIndex].bab[babIndex].questions[questionIndex].type;
     correctAnswer = parseInt(courses[courseIndex].bab[babIndex].questions[questionIndex].correct_answer);
@@ -3115,7 +3118,7 @@ function saveEdittedCourse() {
 }
 
 function deleteQuestion() {
-    var question = coursesJSON[courseIndex].bab[babIndex].questions[currentQuestion].question;
+    var question = currentEdittedQuestion;
     alert(question.id);
     return;
     $.ajax({
