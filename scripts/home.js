@@ -1478,11 +1478,7 @@ function editQuestion(btnEditQuestion) {
         questionType = 1;
         $("#edit-question-choose-question-type").html("Isian");
         var isianA = splittedAnswer[0];
-        var isianB = splittedAnswer[1];
-        var isianC = splittedAnswer[2];
         $("#edit-question-isian-a").val(isianA);
-        $("#edit-question-isian-b").val(isianB);
-        $("#edit-question-isian-c").val(isianC);
         $("#edit-question-pilihan-answers").css("display", "none");
         $("#edit-question-isian-answers").css("display", "block");
     }
@@ -1734,8 +1730,6 @@ function addQuestion() {
     $("#answer-c").val("");
     $("#answer-d").val("");
     $("#isian-a").val("");
-    $("#isian-b").val("");
-    $("#isian-c").val("");
     $("#add-question-content").val("");
     if (courseIndex == -1) {
         $("#add-question-dialog").css("height", "250px");
@@ -1762,9 +1756,7 @@ function addQuestion() {
     $("#b-check-active").css("display", "none");
     $("#c-check-active").css("display", "none");
     $("#d-check-active").css("display", "none");
-    $("#isian-a").val();
-    $("#isian-b").val();
-    $("#isian-c").val();
+    $("#isian-a").val("");
     questionType = -1;
     correctAnswer = -1;
     imageSize = 0;
@@ -1837,9 +1829,7 @@ function saveEdittedQuestion() {
         answers += "@";
         answers += answerD;
     } else if (questionType == 1) {
-        var isianA = $("#edit-question-isian-a").val();
-        var isianB = $("#edit-question-isian-b").val();
-        var isianC = $("#edit-question-isian-c").val();
+        var isianA = $("#edit-question-isian-a").val("");
         if (isianA == '' || isianB == '' || isianC == '') {
             $("#edit-question-error").html("Mohon isi jawaban untuk pengoreksian");
             $("#edit-question-dialog").css("height", "530px");
@@ -2022,9 +2012,7 @@ function fillQuestion() {
         answers += "@";
         answers += answerD;
     } else if (questionType == 1) {
-        var isianA = $("#isian-a").val();
-        var isianB = $("#isian-b").val();
-        var isianC = $("#isian-c").val();
+        var isianA = $("#isian-a").val("");
         if (isianA == '' || isianB == '' || isianC == '') {
             $("#fill-question-error").html("Mohon isi jawaban untuk pengoreksian");
             $("#fill-question-dialog").css("height", "530px");
