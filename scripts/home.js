@@ -3119,7 +3119,7 @@ function saveEdittedCourse() {
 
 function deleteQuestion() {
     var question = currentEdittedQuestion;
-    alert(question.id);
+    alert(question.answers);
     return;
     $.ajax({
         type: 'GET',
