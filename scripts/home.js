@@ -1829,7 +1829,7 @@ function saveEdittedQuestion() {
         answers += "@";
         answers += answerD;
     } else if (questionType == 1) {
-        var isianA = $("#edit-question-isian-a").val("");
+        var isianA = $("#edit-question-isian-a").val();
         if (isianA == '' || isianB == '' || isianC == '') {
             $("#edit-question-error").html("Mohon isi jawaban untuk pengoreksian");
             $("#edit-question-dialog").css("height", "530px");
@@ -2012,7 +2012,7 @@ function fillQuestion() {
         answers += "@";
         answers += answerD;
     } else if (questionType == 1) {
-        var isianA = $("#isian-a").val("");
+        var isianA = $("#isian-a").val();
         if (isianA == '' || isianB == '' || isianC == '') {
             $("#fill-question-error").html("Mohon isi jawaban untuk pengoreksian");
             $("#fill-question-dialog").css("height", "530px");
