@@ -3123,7 +3123,7 @@ function deleteQuestion() {
     $.ajax({
         type: 'GET',
         url: PHP_URL+'delete-question.php',
-        data: {'id': question.id},
+        data: {'id': questionId},
         dataType: 'text',
         success: function(a) {
             $("#edit-question-dialog-ctr").css("display", "none");
