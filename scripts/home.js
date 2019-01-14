@@ -1508,6 +1508,7 @@ function editQuestion(btnEditQuestion) {
             audioFileName = guid();
             audioURL = "http://ilatih.com/backend/userdata/audios/"+audioFileName;
         }
+        alert(imgFileName);
         if (imgFileName != '') {
             var fd4 = new FormData();
             fd4.append("img_file_name", imgFileName);
@@ -1520,7 +1521,6 @@ function editQuestion(btnEditQuestion) {
                 contentType: false,
                 cache: false,
                 success: function (a) {
-                    alert(a);
                     pictureFile = null;
                 }
             });
