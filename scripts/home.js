@@ -1559,10 +1559,10 @@ function editQuestion(btnEditQuestion) {
         }
         var fd = new FormData();
         fd.append("question", $("#edit-question-content").val());
-        answerA = $("#edit-question-a").val();
-        answerB = $("#edit-question-b").val();
-        answerC = $("#edit-question-c").val();
-        answerD = $("#edit-question-d").val();
+        answerA = $("#edit-question-answer-a").val();
+        answerB = $("#edit-question-answer-b").val();
+        answerC = $("#edit-question-answer-c").val();
+        answerD = $("#edit-question-answer-d").val();
         answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
         var reason = $("#edit-question-reason").val();
         fd.append("answers", answers);
@@ -2988,10 +2988,8 @@ function editQuestionSelectImage() {
             return;
         }
         imageSize = size;
-        alert("This line");
         var fr = new FileReader();
         fr.onload = function () {
-            alert("This line 2");
             imageData = fr.result;
             $("#edit-question-img").css("backgroundImage", "url('" + fr.result + "')");
         };
