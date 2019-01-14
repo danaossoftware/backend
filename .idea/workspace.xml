@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/upload-audio.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/upload-img-2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/upload-video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/update-question.php" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/update-question.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/update-question.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="255">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="16" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -454,12 +449,12 @@
       <workItem from="1547471210370" duration="634000" />
       <workItem from="1547476232232" duration="196000" />
       <workItem from="1547476580372" duration="99000" />
-      <workItem from="1547482657435" duration="4773000" />
+      <workItem from="1547482657435" duration="4793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252925000" />
+    <option name="totallyTimeSpent" value="252945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -996,8 +991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/update-question.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>
