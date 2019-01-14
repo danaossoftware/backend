@@ -2988,6 +2988,12 @@ function editQuestionSelectImage() {
             return;
         }
         imageSize = size;
+        var fr = new FileReader();
+        fr.onload = function () {
+            imageData = fr.result;
+            $("#edit-question-img").css("backgroundImage", "url('" + fr.result + "')");
+        };
+        fr.readAsDataURL($(this).prop("files")[0]);
         pictureFile = $(this).prop("files")[0];
     });
     $("#edit-question-select-img").click();
@@ -3022,6 +3028,13 @@ function editQuestionSelectVideo() {
             return;
         }
         videoSize = size;
+        var fr = new FileReader();
+        fr.onload = function () {
+            imageData = fr.result;
+            $("#edit-question-video-source").attr("src", fr.result);
+            $("#edit-question-video")[0].load();
+        };
+        fr.readAsDataURL($(this).prop("files")[0]);
         videoFile = $(this).prop("files")[0];
     });
     $("#edit-question-select-video").click();
@@ -3056,6 +3069,13 @@ function editQuestionSelectAudio() {
             return;
         }
         audioSize = size;
+        var fr = new FileReader();
+        fr.onload = function () {
+            imageData = fr.result;
+            $("#edit-question-audio-source").attr("src", fr.result);
+            $("#edit-question-audio")[0].load();
+        };
+        fr.readAsDataURL($(this).prop("files")[0]);
         audioFile = $(this).prop("files")[0];
     });
     $("#edit-question-select-audio").click();
