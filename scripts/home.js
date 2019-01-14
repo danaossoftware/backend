@@ -1337,6 +1337,9 @@ function expandBab(divBabName) {
 }
 
 function editQuestion(btnEditQuestion) {
+    pictureFile = null;
+    videoFile = null;
+    audioFile = null;
     $("#edit-question-a-check").on({
         mouseenter: function () {
             $("#edit-question-a-check-active").css("display", "block");
@@ -1425,14 +1428,12 @@ function editQuestion(btnEditQuestion) {
     if (pictureURL != '') {
         $("#edit-question-img").css("backgroundImage", "url('" + pictureURL + "')");
         editQuestionMediaData = "noupdate"; //"noupdate" means, the current picture of question will not be replaced
-        pictureFile = "noupdate";
     } else {
         $("#edit-question-img").css("backgroundImage", "url('img/bab-placeholder.jpg')");
     }
     if (videoURL != '') {
         $("#edit-question-video-source").attr("src", videoURL);
         $("#edit-question-video")[0].load();
-        videoFile = "noupdate";
     } else {
         $("#edit-question-video-source").attr("src", "");
         $("#edit-question-video")[0].load();
@@ -1440,7 +1441,6 @@ function editQuestion(btnEditQuestion) {
     if (audioURL != '') {
         $("#edit-question-audio-source").attr("src", videoURL);
         $("#edit-question-audio")[0].load();
-        audioFile = "noupdate";
     } else {
         $("#edit-question-audio-source").attr("src", "");
         $("#edit-question-audio")[0].load();
