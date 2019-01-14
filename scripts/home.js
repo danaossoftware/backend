@@ -6,7 +6,6 @@ var babImgURL = "";
 var babIndex = -1;
 var babName = "";
 var correctAnswer = -1;
-var questionsJSON = "";
 var editQuestionMediaData = "";
 var mediaFile = "";
 var mediaType = "";
@@ -1206,7 +1205,7 @@ function getQuestions() {
                 // Error
             } else {
                 var courses = JSON.parse(a);
-                questionsJSON = a;
+                coursesJSON = courses;
                 for (var i = 0; i < courses.length; i++) {
                     var course = courses[i];
                     var divCourse = document.createElement("div");
@@ -1411,7 +1410,7 @@ function editQuestion(btnEditQuestion) {
     var questionIndex = id.substr(a, b - a);
     questionIndex = questionIndex.trim();
     currentQuestion = questionIndex;
-    var courses = JSON.parse(questionsJSON);
+    var courses = coursesJSON;
     var question = courses[courseIndex].bab[babIndex].questions[questionIndex].question;
     var answers = courses[courseIndex].bab[babIndex].questions[questionIndex].answers;
     var type = courses[courseIndex].bab[babIndex].questions[questionIndex].type;
@@ -1654,7 +1653,6 @@ function loadCoursesIntoShowCoursesOption() {
                 // Error
             } else {
                 var courses = JSON.parse(a);
-                coursesJSON = courses;
                 for (var i = 0; i < courses.length; i++) {
                     var course = courses[i];
                     addCourseToShowCoursesOption(course.name, course.lecturer);
@@ -1914,7 +1912,7 @@ function saveEdittedQuestion() {
         });
     }
     var fd = new FormData();
-    var courses = JSON.parse(questionsJSON);
+    var courses = coursesJSON;
     var questionId = courses[courseIndex].bab[babIndex].questions[currentQuestion].id;
     var courseId = courses[courseIndex].bab[babIndex].questions[currentQuestion].course_id;
     var babId = courses[courseIndex].bab[babIndex].questions[currentQuestion].bab_id;
@@ -2642,6 +2640,7 @@ function getCourses() {
         success: function (response) {
             console.log(response);
             var courses = JSON.parse(response);
+            coursesJSON = courses;
             lecturers = courses;
             var items = "";
             for (var i = 0; i < courses.length; i++) {

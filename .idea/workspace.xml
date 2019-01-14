@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="3119" column="10" selection-start-line="3119" selection-start-column="10" selection-end-line="3119" selection-end-column="10" />
+            <state relative-caret-position="444">
+              <caret line="3130" column="1" lean-forward="true" selection-start-line="3130" selection-start-column="1" selection-end-line="3130" selection-end-column="1" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -180,12 +180,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>10px</find>
-      <find>bab-dialog-edit</find>
-      <find>padding</find>
-      <find>index</find>
-      <find>edit-bab</find>
-      <find>currentEdittedBabIndex</find>
       <find>prompt-no</find>
       <find>daftarbab</find>
       <find>addbab</find>
@@ -207,12 +201,17 @@
       <find>questionsJSON =</find>
       <find>currentQuestion =</find>
       <find>questionsJSON[</find>
-      <find>questionsJSON</find>
       <find>currentquestion =</find>
       <find>questionIndex</find>
+      <find>courses</find>
+      <find>coursesJSON =</find>
+      <find>get-courses</find>
+      <find>getquestions</find>
+      <find>questionsJSON</find>
+      <find>coursesJSON</find>
+      <find>questionsjson</find>
     </findStrings>
     <replaceStrings>
-      <replace>check-img</replace>
       <replace>/</replace>
       <replace>'</replace>
       <replace>265px</replace>
@@ -242,6 +241,7 @@
       <replace>danaos.xyz</replace>
       <replace>ilatih.com</replace>
       <replace>PHP_URL</replace>
+      <replace>courses</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Dana\Documents\WebFiles\backend\scripts</dir>
@@ -415,12 +415,12 @@
       <workItem from="1547471210370" duration="634000" />
       <workItem from="1547476232232" duration="196000" />
       <workItem from="1547476580372" duration="99000" />
-      <workItem from="1547482657435" duration="546000" />
+      <workItem from="1547482657435" duration="668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248698000" />
+    <option name="totallyTimeSpent" value="248820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -908,8 +908,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="3119" column="10" selection-start-line="3119" selection-start-column="10" selection-end-line="3119" selection-end-column="10" />
+        <state relative-caret-position="444">
+          <caret line="3130" column="1" lean-forward="true" selection-start-line="3130" selection-start-column="1" selection-end-line="3130" selection-end-column="1" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
