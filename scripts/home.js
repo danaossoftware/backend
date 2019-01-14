@@ -1422,6 +1422,7 @@ function editQuestion(btnEditQuestion) {
     var pictureURL = courses[courseIndex].bab[babIndex].questions[questionIndex].picture_url;
     var videoURL = courses[courseIndex].bab[babIndex].questions[questionIndex].video_url;
     var audioURL = courses[courseIndex].bab[babIndex].questions[questionIndex].audio_url;
+    alert(pictureURL);
     if (pictureURL != '') {
         $("#edit-question-img").css("backgroundImage", "url('" + pictureURL + "')");
         editQuestionMediaData = "noupdate"; //"noupdate" means, the current picture of question will not be replaced
