@@ -1496,6 +1496,7 @@ function editQuestion(btnEditQuestion) {
         var imgFileName = "";
         var videoFileName = "";
         var audioFileName = "";
+        alert(pictureFile != null);
         if (pictureFile != null && pictureFile != 'noupdate') {
             imgFileName = guid();
             pictureURL = "http://ilatih.com/backend/userdata/imgs/"+imgFileName;
