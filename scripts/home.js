@@ -3120,8 +3120,6 @@ function saveEdittedCourse() {
 function deleteQuestion() {
     var courses = coursesJSON;
     var questionId = courses[courseIndex].bab[babIndex].questions[currentQuestion].id;
-    alert(questionId);
-    return;
     $.ajax({
         type: 'GET',
         url: PHP_URL+'delete-question.php',
