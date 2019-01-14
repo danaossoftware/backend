@@ -18,7 +18,7 @@ if ($results->num_rows > 0) {
                 $response3 = "[";
                 if ($results3 && $results3->num_rows > 0) {
                     while ($row3 = $results3->fetch_assoc()) {
-                        $response3 .= ("{\"id\": \"" . $row3["id"] . "\", \"question\": \"" . $row3["question"] . "\", \"course_id\": \"" . $row3["course_id"] . "\", \"bab_id\": \"" . $row3["bab_id"] . "\", \"type\": \"" . $row3["type"] . "\", \"answers\": \"" . $row3["answers"] . "\", \"correct_answer\": \"" . $row3["correct_answer"] . "\", \"picture_url\": \"" . $row3["picture_url"] . "\", \"video_url\": \"" . $row3["video_url"] . "\", \"audio_url\": \"" . $row3["audio_url"] . "\"}, ");
+                        $response3 .= ("{\"id\": \"" . $row3["id"] . "\", \"question\": \"" . $row3["question"] . "\", \"course_id\": \"" . $row3["course_id"] . "\", \"bab_id\": \"" . $row3["bab_id"] . "\", \"type\": \"" . $row3["type"] . "\", \"answers\": \"" . $row3["answers"] . "\", \"correct_answer\": \"" . $row3["correct_answer"] . "\", \"reason\": \"" . $row3["reason"] . "\", \"picture_url\": \"" . $row3["picture_url"] . "\", \"video_url\": \"" . $row3["video_url"] . "\", \"audio_url\": \"" . $row3["audio_url"] . "\"}, ");
                     }
                 }
                 if (strlen($response3) > 1) {

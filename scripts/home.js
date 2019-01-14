@@ -1411,7 +1411,6 @@ function editQuestion(btnEditQuestion) {
     var questionIndex = id.substr(a, b - a);
     questionIndex = questionIndex.trim();
     currentQuestion = questionIndex;
-
     var courses = coursesJSON;
     var question = courses[courseIndex].bab[babIndex].questions[questionIndex].question;
     currentEdittedQuestion = question;
@@ -1442,6 +1441,7 @@ function editQuestion(btnEditQuestion) {
         $("#edit-question-audio-source").attr("src", "");
         $("#edit-question-audio")[0].load();
     }
+    alert(question.reason);
     $("#edit-question-reason").val(question.reason);
     var splittedAnswer = answers.split("@");
     if (type == 'pilihan') {
