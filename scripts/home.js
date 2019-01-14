@@ -3029,7 +3029,8 @@ function editQuestionSelectVideo() {
         videoSize = size;
         var fr = new FileReader();
         fr.onload = function () {
-            imageData = fr.result;
+            videoData = fr.result;
+            alert(videoData);
             $("#edit-question-video-source").attr("src", fr.result);
             $("#edit-question-video")[0].load();
         };
@@ -3070,7 +3071,7 @@ function editQuestionSelectAudio() {
         audioSize = size;
         var fr = new FileReader();
         fr.onload = function () {
-            imageData = fr.result;
+            audioData = fr.result;
             $("#edit-question-audio-source").attr("src", fr.result);
             $("#edit-question-audio")[0].load();
         };
