@@ -1497,11 +1497,8 @@ function editQuestion(btnEditQuestion) {
         var videoFileName = "";
         var audioFileName = "";
         if (pictureFile != null) {
-            alert("This line");
             imgFileName = guid();
             pictureURL = "http://ilatih.com/backend/userdata/imgs/"+imgFileName;
-        } else {
-            alert("This line 2");
         }
         if (videoFile != null) {
             videoFileName = guid();
@@ -1512,52 +1509,53 @@ function editQuestion(btnEditQuestion) {
             audioURL = "http://ilatih.com/backend/userdata/audios/"+audioFileName;
         }
         if (imgFileName != '') {
-            var fd2 = new FormData();
-            fd2.append("img_file_name", imgFileName);
-            fd2.append("img_file", pictureFile);
+            var fd4 = new FormData();
+            fd4.append("img_file_name", imgFileName);
+            fd4.append("img_file", pictureFile);
             $.ajax({
                 type: 'POST',
                 url: PHP_URL + 'upload-img-2.php',
-                data: fd2,
+                data: fd4,
                 processData: false,
                 contentType: false,
                 cache: false,
                 success: function (a) {
+                    pictureFile = null;
                 }
             });
         }
         if (videoFileName != '') {
-            var fd2 = new FormData();
-            fd2.append("video_file_name", videoFileName);
-            fd2.append("video_file", pictureFile);
+            var fd4 = new FormData();
+            fd4.append("video_file_name", videoFileName);
+            fd4.append("video_file", pictureFile);
             $.ajax({
                 type: 'POST',
                 url: PHP_URL + 'upload-video.php',
-                data: fd2,
+                data: fd4,
                 processData: false,
                 contentType: false,
                 cache: false,
                 success: function (a) {
+                    videoFile = null;
                 }
             });
         }
         if (audioFileName != '') {
-            var fd2 = new FormData();
-            fd2.append("audio_file_name", audioFileName);
-            fd2.append("audio_file", pictureFile);
+            var fd4 = new FormData();
+            fd4.append("audio_file_name", audioFileName);
+            fd4.append("audio_file", pictureFile);
             $.ajax({
                 type: 'POST',
                 url: PHP_URL + 'upload-audio.php',
-                data: fd2,
+                data: fd4,
                 processData: false,
                 contentType: false,
                 cache: false,
                 success: function (a) {
+                    audioFile = null;
                 }
             });
         }
-        alert(imgFileName);
-        alert(pictureURL);
         var fd = new FormData();
         fd.append("question", $("#edit-question-content").val());
         answerA = $("#edit-question-a").val();
@@ -1599,79 +1597,6 @@ function editQuestion(btnEditQuestion) {
             }
         });
     });
-    $("#edit-question-change-media").on("click", function () {
-        $("#edit-question-select-media").on("change", function () {
-            pictureFile = $(this).prop("files")[0];
-            if (pictureFile.type.startsWith("video/")) {
-                $("#edit-question-video").css("display", "block");
-                $("#edit-question-img").css("display", "none");
-                mediaType = "video";
-            } else if (pictureFile.type.startsWith("image/")) {
-                $("#edit-question-img").css("display", "block");
-                $("#edit-question-video").css("display", "none");
-                mediaType = "image";
-            }
-            var fr = new FileReader();
-            fr.onload = function () {
-                editQuestionMediaData = fr.result;
-                if (pictureFile.type.startsWith("video/")) {
-                    document.getElementById("edit-question-video").src = editQuestionMediaData;
-                } else if (pictureFile.type.startsWith("image/")) {
-                    document.getElementById("edit-question-img").src = editQuestionMediaData;
-                }
-            };
-            fr.readAsDataURL($(this).prop("files")[0]);
-        });
-        $("#edit-question-select-media").click();
-    });
-    $("#edit-question-remove-media").on("click", function () {
-        document.getElementById("edit-question-img").src = "img/no-img.png";
-        var video = document.getElementById("edit-question-video");
-        video.removeAttribute("src");
-        video.load();
-        editQuestionMediaData = "";
-    });
-}
-
-function uploadFile(file, mediaType, success, failure) {
-    if (file == 'noupdate') {
-        success('noupdate');
-        return;
-    }
-    var step = 8192;
-    var total = file.size;
-    var start = 0;
-
-    var imgFileName = guid();
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-        $.ajax({
-            type: 'POST',
-            url: 'http://ilatih.com/backend/scripts/upload-media-with-php-input.php?filename=' + imgFileName + '&type=' + mediaType,
-            data: e.target.result,
-            cache: false,
-            success: function (a) {
-                if (start >= total) {
-                    if (mediaType == "image") {
-                        success("http://ilatih.com/backend/userdata/imgs/" + imgFileName);
-                    } else if (mediaType == "video") {
-                        success("http://ilatih.com/backend/userdata/videos/" + imgFileName);
-                    }
-                    return;
-                }
-                var blob = file.slice(start, start + step);
-                start += step;
-                reader.readAsDataURL(blob);
-            },
-            error: function (a, b, c) {
-                failure(b + ' ' + c);
-            }
-        });
-    };
-    var blob = file.slice(start, start + step);
-    start += step;
-    reader.readAsDataURL(blob);
 }
 
 function guid() {
@@ -3062,12 +2987,7 @@ function editQuestionSelectImage() {
             return;
         }
         imageSize = size;
-        var fr = new FileReader();
-        fr.onload = function () {
-            imageData = fr.result;
-            $("#edit-question-img").css("backgroundImage", "url('" + fr.result + "')");
-        };
-        fr.readAsDataURL($(this).prop("files")[0]);
+        pictureFile = $(this).prop("files")[0];
     });
     $("#edit-question-select-img").click();
 }
