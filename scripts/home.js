@@ -1496,18 +1496,18 @@ function editQuestion(btnEditQuestion) {
         var imgFileName = "";
         var videoFileName = "";
         var audioFileName = "";
-        if (pictureFile != null && pictureFile != 'noupdate') {
+        if (pictureFile != null) {
             alert("This line");
             imgFileName = guid();
             pictureURL = "http://ilatih.com/backend/userdata/imgs/"+imgFileName;
         } else {
             alert("This line 2");
         }
-        if (videoFile != null && videoFile != 'noupdate') {
+        if (videoFile != null) {
             videoFileName = guid();
             videoURL = "http://ilatih.com/backend/userdata/videos/"+videoFileName;
         }
-        if (audioFile != null && audioFile != 'noupdate') {
+        if (audioFile != null) {
             audioFileName = guid();
             audioURL = "http://ilatih.com/backend/userdata/audios/"+audioFileName;
         }
