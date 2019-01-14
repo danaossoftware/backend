@@ -3118,8 +3118,9 @@ function saveEdittedCourse() {
 }
 
 function deleteQuestion() {
-    var question = currentEdittedQuestion;
-    alert("ID: "+question.answers);
+    var courses = coursesJSON;
+    var questionId = courses[courseIndex].bab[babIndex].questions[currentQuestion].id;
+    alert(questionId);
     return;
     $.ajax({
         type: 'GET',

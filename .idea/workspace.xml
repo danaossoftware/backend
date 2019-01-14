@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="3121" column="17" selection-start-line="3121" selection-start-column="17" selection-end-line="3121" selection-end-column="17" />
+            <state relative-caret-position="526">
+              <caret line="3122" column="10" selection-start-line="3122" selection-start-column="10" selection-end-line="3122" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -93,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="965" column="26" lean-forward="true" selection-start-line="965" selection-start-column="26" selection-end-line="965" selection-end-column="26" />
+            <state relative-caret-position="526">
+              <caret line="963" column="48" selection-start-line="963" selection-start-column="48" selection-end-line="963" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -180,7 +180,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getdaftarbab</find>
       <find>addquestion</find>
       <find>add-question</find>
       <find>add-question-courses</find>
@@ -208,8 +207,9 @@
       <find>questionsjson</find>
       <find>currentedi</find>
       <find>edit-question-dialog-ctr</find>
-      <find>currentEdittedQuestion</find>
       <find>courses[courseIndex].bab[babIndex].questions[questionIndex]</find>
+      <find>currentEdittedQuestion</find>
+      <find>edit-question-save</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -415,12 +415,12 @@
       <workItem from="1547471210370" duration="634000" />
       <workItem from="1547476232232" duration="196000" />
       <workItem from="1547476580372" duration="99000" />
-      <workItem from="1547482657435" duration="940000" />
+      <workItem from="1547482657435" duration="1060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249092000" />
+    <option name="totallyTimeSpent" value="249212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -815,6 +815,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/get-questions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/delete-question.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -824,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="965" column="26" lean-forward="true" selection-start-line="965" selection-start-column="26" selection-end-line="965" selection-end-column="26" />
+        <state relative-caret-position="526">
+          <caret line="963" column="48" selection-start-line="963" selection-start-column="48" selection-end-line="963" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -899,17 +906,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/get-questions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="3121" column="17" selection-start-line="3121" selection-start-column="17" selection-end-line="3121" selection-end-column="17" />
+        <state relative-caret-position="526">
+          <caret line="3122" column="10" selection-start-line="3122" selection-start-column="10" selection-end-line="3122" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
