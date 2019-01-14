@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="1564" column="78" selection-start-line="1564" selection-start-column="78" selection-end-line="1564" selection-end-column="78" />
+            <state relative-caret-position="203">
+              <caret line="1339" column="19" selection-start-line="1339" selection-start-column="19" selection-end-line="1339" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -111,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="869" column="66" selection-start-line="869" selection-start-column="66" selection-end-line="869" selection-end-column="66" />
+            <state relative-caret-position="17">
+              <caret line="745" column="14" selection-start-line="745" selection-start-column="14" selection-end-line="745" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -220,7 +221,6 @@
       <find>currentedi</find>
       <find>courses[courseIndex].bab[babIndex].questions[questionIndex]</find>
       <find>currentEdittedQuestion</find>
-      <find>edit-question-save</find>
       <find>edit soal</find>
       <find>soal:</find>
       <find>A:</find>
@@ -244,6 +244,7 @@
       <find>pictureURL</find>
       <find>pictureURL = ''</find>
       <find>pictureURL = &quot;&quot;</find>
+      <find>edit-question-save</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -332,12 +333,12 @@
         <option value="$PROJECT_DIR$/scripts/edit-bab.php" />
         <option value="$PROJECT_DIR$/scripts/remove-bab.php" />
         <option value="$PROJECT_DIR$/scripts/delete-question.php" />
-        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/scripts/get-questions.php" />
         <option value="$PROJECT_DIR$/scripts/upload-img-2.php" />
         <option value="$PROJECT_DIR$/scripts/upload-audio.php" />
         <option value="$PROJECT_DIR$/scripts/upload-video.php" />
         <option value="$PROJECT_DIR$/scripts/update-question.php" />
+        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/scripts/home.js" />
       </list>
     </option>
@@ -449,12 +450,12 @@
       <workItem from="1547471210370" duration="634000" />
       <workItem from="1547476232232" duration="196000" />
       <workItem from="1547476580372" duration="99000" />
-      <workItem from="1547482657435" duration="5035000" />
+      <workItem from="1547482657435" duration="5105000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253187000" />
+    <option name="totallyTimeSpent" value="253257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -831,10 +832,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/upload-audio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/upload-video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/upload-img-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="88" lean-forward="true" selection-end-line="2" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/update-question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="869" column="66" selection-start-line="869" selection-start-column="66" selection-end-line="869" selection-end-column="66" />
+        <state relative-caret-position="17">
+          <caret line="745" column="14" selection-start-line="745" selection-start-column="14" selection-end-line="745" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -924,38 +953,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/upload-audio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/upload-video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/upload-img-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="88" lean-forward="true" selection-end-line="2" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/update-question.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="1564" column="78" selection-start-line="1564" selection-start-column="78" selection-end-line="1564" selection-end-column="78" />
+        <state relative-caret-position="203">
+          <caret line="1339" column="19" selection-start-line="1339" selection-start-column="19" selection-end-line="1339" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />

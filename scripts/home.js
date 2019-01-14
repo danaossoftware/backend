@@ -1337,6 +1337,7 @@ function expandBab(divBabName) {
 }
 
 function editQuestion(btnEditQuestion) {
+    alert("Hello");
     $("#edit-question-a-check").on({
         mouseenter: function () {
             $("#edit-question-a-check-active").css("display", "block");
