@@ -3117,6 +3117,8 @@ function saveEdittedCourse() {
 
 function deleteQuestion() {
     var question = questionsJSON[currentQuestion];
+    alert(question.id);
+    return;
     $.ajax({
         type: 'GET',
         url: PHP_URL+'delete-question.php',
