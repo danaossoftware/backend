@@ -3115,7 +3115,7 @@ function saveEdittedCourse() {
 }
 
 function deleteQuestion() {
-    var question = courses[courseIndex].bab[babIndex].questions[questionIndex].question;
+    var question = coursesJSON[courseIndex].bab[babIndex].questions[questionIndex].question;
     alert(question.id);
     return;
     $.ajax({
