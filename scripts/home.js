@@ -2988,8 +2988,10 @@ function editQuestionSelectImage() {
             return;
         }
         imageSize = size;
+        alert("This line");
         var fr = new FileReader();
         fr.onload = function () {
+            alert("This line 2");
             imageData = fr.result;
             $("#edit-question-img").css("backgroundImage", "url('" + fr.result + "')");
         };

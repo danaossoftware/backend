@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="3075" column="10" lean-forward="true" selection-start-line="3075" selection-start-column="10" selection-end-line="3075" selection-end-column="10" />
+            <state relative-caret-position="221">
+              <caret line="2993" column="33" lean-forward="true" selection-start-line="2993" selection-start-column="33" selection-end-line="2993" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -111,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="769" column="65" lean-forward="true" selection-start-line="769" selection-start-column="65" selection-end-line="769" selection-end-column="65" />
+            <state relative-caret-position="186">
+              <caret line="759" column="170" lean-forward="true" selection-start-line="759" selection-start-column="170" selection-end-line="759" selection-end-column="170" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -449,12 +449,12 @@
       <workItem from="1547471210370" duration="634000" />
       <workItem from="1547476232232" duration="196000" />
       <workItem from="1547476580372" duration="99000" />
-      <workItem from="1547482657435" duration="5990000" />
+      <workItem from="1547482657435" duration="6042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254142000" />
+    <option name="totallyTimeSpent" value="254194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -861,8 +861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="769" column="65" lean-forward="true" selection-start-line="769" selection-start-column="65" selection-end-line="769" selection-end-column="65" />
+        <state relative-caret-position="186">
+          <caret line="759" column="170" lean-forward="true" selection-start-line="759" selection-start-column="170" selection-end-line="759" selection-end-column="170" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -954,8 +954,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="3075" column="10" lean-forward="true" selection-start-line="3075" selection-start-column="10" selection-end-line="3075" selection-end-column="10" />
+        <state relative-caret-position="221">
+          <caret line="2993" column="33" lean-forward="true" selection-start-line="2993" selection-start-column="33" selection-end-line="2993" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
