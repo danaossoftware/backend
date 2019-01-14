@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="3120" column="11" selection-start-line="3120" selection-start-column="11" selection-end-line="3120" selection-end-column="11" />
+            <state relative-caret-position="240">
+              <caret line="3119" column="10" selection-start-line="3119" selection-start-column="10" selection-end-line="3119" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -68,6 +68,15 @@
                 <element signature="n#style#0;n#img#0;n#div#1;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/get-questions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -171,12 +180,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login-btn</find>
-      <find>mohave</find>
-      <find>loadbab</find>
-      <find>getCourses</find>
-      <find>getdaftarva</find>
-      <find>bab-dialog</find>
       <find>10px</find>
       <find>bab-dialog-edit</find>
       <find>padding</find>
@@ -201,6 +204,12 @@
       <find>simpan</find>
       <find>edit-question-dialog-ctr</find>
       <find>PHP_PATH</find>
+      <find>questionsJSON =</find>
+      <find>currentQuestion =</find>
+      <find>questionsJSON[</find>
+      <find>questionsJSON</find>
+      <find>currentquestion =</find>
+      <find>questionIndex</find>
     </findStrings>
     <replaceStrings>
       <replace>check-img</replace>
@@ -406,12 +415,12 @@
       <workItem from="1547471210370" duration="634000" />
       <workItem from="1547476232232" duration="196000" />
       <workItem from="1547476580372" duration="99000" />
-      <workItem from="1547482657435" duration="410000" />
+      <workItem from="1547482657435" duration="546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248562000" />
+    <option name="totallyTimeSpent" value="248698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -667,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/get-questions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="111" selection-start-line="20" selection-start-column="111" selection-end-line="20" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/add-question.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -897,10 +899,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/get-questions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="3120" column="11" selection-start-line="3120" selection-start-column="11" selection-end-line="3120" selection-end-column="11" />
+        <state relative-caret-position="240">
+          <caret line="3119" column="10" selection-start-line="3119" selection-start-column="10" selection-end-line="3119" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
