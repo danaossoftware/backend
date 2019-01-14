@@ -1496,7 +1496,6 @@ function editQuestion(btnEditQuestion) {
         var imgFileName = "";
         var videoFileName = "";
         var audioFileName = "";
-        alert(pictureFile != null);
         if (pictureFile != null && pictureFile != 'noupdate') {
             imgFileName = guid();
             pictureURL = "http://ilatih.com/backend/userdata/imgs/"+imgFileName;
@@ -1554,6 +1553,8 @@ function editQuestion(btnEditQuestion) {
                 }
             });
         }
+        alert(imgFileName);
+        alert(pictureURL);
         var fd = new FormData();
         fd.append("question", $("#edit-question-content").val());
         answerA = $("#edit-question-a").val();
