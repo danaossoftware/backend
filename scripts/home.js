@@ -1816,13 +1816,13 @@ function saveEdittedQuestion() {
         answers += answerD;
     } else if (questionType == 1) {
         var isianA = $("#edit-question-isian-a").val();
-        if (isianA == '' || isianB == '' || isianC == '') {
+        if (isianA == '') {
             $("#edit-question-error").html("Mohon isi jawaban untuk pengoreksian");
             $("#edit-question-dialog").css("height", "530px");
             $("#edit-question-error").css("display", "block");
             return;
         }
-        answers += (isianA + "@" + isianB + "@" + isianC);
+        answers += (isianA);
         correctAnswer = 0;
     }
     $("#loading-message").html("Menyimpan soal...<br/>Mohon untuk tidak menutup Tab ini.");
@@ -1999,13 +1999,13 @@ function fillQuestion() {
         answers += answerD;
     } else if (questionType == 1) {
         var isianA = $("#isian-a").val();
-        if (isianA == '' || isianB == '' || isianC == '') {
+        if (isianA == '') {
             $("#fill-question-error").html("Mohon isi jawaban untuk pengoreksian");
             $("#fill-question-dialog").css("height", "530px");
             $("#fill-question-error").css("display", "block");
             return;
         }
-        answers += (isianA + "@" + isianB + "@" + isianC);
+        answers += (isianA);
         correctAnswer = 0;
     }
     $("#loading-message").html("Menyimpan soal...<br/>Mohon untuk tidak menutup Tab ini.");
