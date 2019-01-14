@@ -1512,6 +1512,7 @@ function editQuestion(btnEditQuestion) {
             fd.append("picture_url", pictureURL);
             fd.append("video_url", videoURL);
             fd.append("reason", reason);
+            alert(reason);
             $.ajax({
                 type: 'POST',
                 url: PHP_URL + 'update-question.php',
