@@ -7,7 +7,7 @@ var babIndex = -1;
 var babName = "";
 var correctAnswer = -1;
 var editQuestionMediaData = "";
-var mediaFile = "";
+var pictureFile = "";
 var mediaType = "";
 var adminsJSON;
 var usersJSON;
@@ -23,6 +23,8 @@ var fillQuestionImageFile;
 var coursesJSON;
 var edittedCourseID;
 var currentEdittedQuestion;
+var audioFile;
+var videoFile;
 
 $(document).ready(function () {
     setCheckBoxListener();
@@ -286,7 +288,7 @@ $(document).ready(function () {
         $("#e-check-active").css("display", "none");
         correctAnswer = 3;
     });
-    $(".profile-picture").on("click", function() {
+    $(".profile-picture").on("click", function () {
         var accountPanel = $(this).parent().parent().find(".account-panel");
         if (accountPanel.css("display") == "none") {
             accountPanel.css("display", "block");
@@ -294,26 +296,26 @@ $(document).ready(function () {
             accountPanel.css("display", "none");
         }
     });
-    $(".log-out").on("click", function() {
+    $(".log-out").on("click", function () {
         $.ajax({
             type: 'GET',
-            url: PHP_URL+'logout.php',
+            url: PHP_URL + 'logout.php',
             dataType: 'text',
             cache: false,
-            success: function(a) {
+            success: function (a) {
                 window.location.href = "index.html";
             },
-            error: function(a, b, c) {
-                alert(b+' '+c);
+            error: function (a, b, c) {
+                alert(b + ' ' + c);
             }
         });
     });
     $.ajax({
         type: 'GET',
-        url: PHP_URL+'get-session.php',
+        url: PHP_URL + 'get-session.php',
         dataType: 'text',
         cache: false,
-        success: function(a) {
+        success: function (a) {
             var cred = JSON.parse(a);
             $(".account-email").html(cred.email);
         }
@@ -400,7 +402,7 @@ function loadSettings() {
             $("#instagram-url").val(instagramURL);
             $("#google-plus-url").val(googlePlusURL);
             $("#linked-in-url").val(linkedInURL);
-            $("#save-settings").on("click", function() {
+            $("#save-settings").on("click", function () {
                 mysql.getElementsByTagName("host")[0].childNodes[0].nodeValue = $("#website").val();
                 mysql.getElementsByTagName("dbuser")[0].childNodes[0].nodeValue = $("#db-user").val();
                 if (mysql.getElementsByTagName("dbpass")[0].childNodes[0] == null) {
@@ -438,18 +440,18 @@ function loadSettings() {
                 fd.append("rules", rules);
                 $.ajax({
                     type: 'POST',
-                    url: PHP_URL+'save-settings.php',
+                    url: PHP_URL + 'save-settings.php',
                     data: fd,
                     processData: false,
                     contentType: false,
                     cache: false,
-                    success: function(a) {
+                    success: function (a) {
                         $("#db-form").css("margin-top", "10px");
                         $("#settings-saved").css("display", "block");
                         window.scrollTo(0, 0);
                     },
-                    error: function(a, b, c) {
-                        alert(b+' '+c);
+                    error: function (a, b, c) {
+                        alert(b + ' ' + c);
                     }
                 });
             });
@@ -1421,15 +1423,16 @@ function editQuestion(btnEditQuestion) {
     var videoURL = courses[courseIndex].bab[babIndex].questions[questionIndex].video_url;
     var audioURL = courses[courseIndex].bab[babIndex].questions[questionIndex].audio_url;
     if (pictureURL != '') {
-        $("#edit-question-img").css("backgroundImage", "url('"+pictureURL+"')");
+        $("#edit-question-img").css("backgroundImage", "url('" + pictureURL + "')");
         editQuestionMediaData = "noupdate"; //"noupdate" means, the current picture of question will not be replaced
-        mediaFile = "noupdate";
+        pictureFile = "noupdate";
     } else {
         $("#edit-question-img").css("backgroundImage", "url('img/bab-placeholder.jpg')");
     }
     if (videoURL != '') {
         $("#edit-question-video-source").attr("src", videoURL);
         $("#edit-question-video")[0].load();
+        videoFile = "noupdate";
     } else {
         $("#edit-question-video-source").attr("src", "");
         $("#edit-question-video")[0].load();
@@ -1437,6 +1440,7 @@ function editQuestion(btnEditQuestion) {
     if (audioURL != '') {
         $("#edit-question-audio-source").attr("src", videoURL);
         $("#edit-question-audio")[0].load();
+        audioFile = "noupdate";
     } else {
         $("#edit-question-audio-source").attr("src", "");
         $("#edit-question-audio")[0].load();
@@ -1489,67 +1493,115 @@ function editQuestion(btnEditQuestion) {
     $("#edit-question-dialog-ctr").fadeIn(200);
     $("#edit-question-save").on("click", function () {
         $("#edit-question-save").off("click");
-        // Upload img first
-        uploadFile(mediaFile, mediaType, function (a) {
-            var pictureURL = "";
-            var videoURL = "";
-            if (mediaType == "image") {
-                pictureURL = a;
-            } else if (mediaType == "video") {
-                videoURL = a;
-            }
-            var fd = new FormData();
-            fd.append("question", $("#edit-question-content").val());
-            answerA = $("#edit-question-a").val();
-            answerB = $("#edit-question-b").val();
-            answerC = $("#edit-question-c").val();
-            answerD = $("#edit-question-d").val();
-            answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
-            var reason = $("#edit-question-reason").val();
-            fd.append("answers", answers);
-            fd.append("correct_answer", correctAnswer);
-            fd.append("question_id", courses[courseIndex].bab[babIndex].questions[questionIndex].id);
-            fd.append("picture_url", pictureURL);
-            fd.append("video_url", videoURL);
-            fd.append("reason", reason);
-            alert(reason);
+        var imgFileName = "";
+        var videoFileName = "";
+        var audioFileName = "";
+        if (pictureFile != null && pictureFile != 'noupdate') {
+            imgFileName = guid();
+            pictureURL = "http://ilatih.com/backend/userdata/imgs/"+imgFileName;
+        }
+        if (videoFile != null && videoFile != 'noupdate') {
+            videoFileName = guid();
+            videoURL = "http://ilatih.com/backend/userdata/videos/"+videoFileName;
+        }
+        if (audioFile != null && audioFile != 'noupdate') {
+            audioFileName = guid();
+            audioURL = "http://ilatih.com/backend/userdata/audios/"+audioFileName;
+        }
+        if (imgFileName != '') {
+            var fd2 = new FormData();
+            fd2.append("img_file_name", imgFileName);
+            fd2.append("img_file", pictureFile);
             $.ajax({
                 type: 'POST',
-                url: PHP_URL + 'update-question.php',
-                data: fd,
-                contentType: false,
+                url: PHP_URL + 'upload-img-2.php',
+                data: fd2,
                 processData: false,
+                contentType: false,
                 cache: false,
                 success: function (a) {
-                    if (a == 0) {
-                        cancelEditingQuestion();
-                        document.getElementById("edit-question-img").src = "img/no-img.png";
-                        document.getElementById("edit-question-video").src = "";
-                        mediaFile = null;
-                        mediaType = "";
-                        editQuestionMediaData = "";
-                        $(".edit-question").off("click");
-                        getQuestions();
-                    } else {
-                        alert("Gagal menyimpan soal, error code: " + a);
-                    }
-                },
-                error: function (a, b, c) {
-                    alert(b + ' ' + c);
                 }
             });
-        }, function (e) {
-            alert(e);
+        }
+        if (videoFileName != '') {
+            var fd2 = new FormData();
+            fd2.append("video_file_name", videoFileName);
+            fd2.append("video_file", pictureFile);
+            $.ajax({
+                type: 'POST',
+                url: PHP_URL + 'upload-video.php',
+                data: fd2,
+                processData: false,
+                contentType: false,
+                cache: false,
+                success: function (a) {
+                }
+            });
+        }
+        if (audioFileName != '') {
+            var fd2 = new FormData();
+            fd2.append("audio_file_name", audioFileName);
+            fd2.append("audio_file", pictureFile);
+            $.ajax({
+                type: 'POST',
+                url: PHP_URL + 'upload-audio.php',
+                data: fd2,
+                processData: false,
+                contentType: false,
+                cache: false,
+                success: function (a) {
+                }
+            });
+        }
+        var fd = new FormData();
+        fd.append("question", $("#edit-question-content").val());
+        answerA = $("#edit-question-a").val();
+        answerB = $("#edit-question-b").val();
+        answerC = $("#edit-question-c").val();
+        answerD = $("#edit-question-d").val();
+        answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
+        var reason = $("#edit-question-reason").val();
+        fd.append("answers", answers);
+        fd.append("correct_answer", correctAnswer);
+        fd.append("question_id", courses[courseIndex].bab[babIndex].questions[questionIndex].id);
+        fd.append("picture_url", pictureURL);
+        fd.append("video_url", videoURL);
+        fd.append("audio_url", audioURL);
+        fd.append("reason", reason);
+        $.ajax({
+            type: 'POST',
+            url: PHP_URL + 'update-question.php',
+            data: fd,
+            contentType: false,
+            processData: false,
+            cache: false,
+            success: function (a) {
+                if (a == 0) {
+                    cancelEditingQuestion();
+                    document.getElementById("edit-question-img").src = "img/no-img.png";
+                    document.getElementById("edit-question-video").src = "";
+                    pictureFile = null;
+                    mediaType = "";
+                    editQuestionMediaData = "";
+                    $(".edit-question").off("click");
+                    getQuestions();
+                } else {
+                    alert("Gagal menyimpan soal, error code: " + a);
+                }
+            },
+            error: function (a, b, c) {
+                alert(b + ' ' + c);
+            }
         });
     });
     $("#edit-question-change-media").on("click", function () {
         $("#edit-question-select-media").on("change", function () {
-            mediaFile = $(this).prop("files")[0];
-            if (mediaFile.type.startsWith("video/")) {
+            pictureFile = $(this).prop("files")[0];
+            if (pictureFile.type.startsWith("video/")) {
                 $("#edit-question-video").css("display", "block");
                 $("#edit-question-img").css("display", "none");
                 mediaType = "video";
-            } else if (mediaFile.type.startsWith("image/")) {
+            } else if (pictureFile.type.startsWith("image/")) {
                 $("#edit-question-img").css("display", "block");
                 $("#edit-question-video").css("display", "none");
                 mediaType = "image";
@@ -1557,9 +1609,9 @@ function editQuestion(btnEditQuestion) {
             var fr = new FileReader();
             fr.onload = function () {
                 editQuestionMediaData = fr.result;
-                if (mediaFile.type.startsWith("video/")) {
+                if (pictureFile.type.startsWith("video/")) {
                     document.getElementById("edit-question-video").src = editQuestionMediaData;
-                } else if (mediaFile.type.startsWith("image/")) {
+                } else if (pictureFile.type.startsWith("image/")) {
                     document.getElementById("edit-question-img").src = editQuestionMediaData;
                 }
             };
@@ -1840,7 +1892,7 @@ function saveEdittedQuestion() {
             $("#edit-question-error").css("display", "block");
             return;
         }
-        answers += (isianA+"@"+isianB+"@"+isianC);
+        answers += (isianA + "@" + isianB + "@" + isianC);
         correctAnswer = 0;
     }
     $("#loading-message").html("Menyimpan soal...<br/>Mohon untuk tidak menutup Tab ini.");
@@ -1852,68 +1904,68 @@ function saveEdittedQuestion() {
     var videoURL = "";
     var audioURL = "";
     if (imageData != '') {
-        imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
+        imageURL = "http://ilatih.com/backend/userdata/imgs/" + imageID;
         var fd2 = new FormData();
         fd2.append("id", imageID);
         fd2.append("img_data", imageData);
         $.ajax({
             type: 'POST',
-            url: PHP_URL+'upload-img-with-id.php',
+            url: PHP_URL + 'upload-img-with-id.php',
             data: fd2,
             processData: false,
             contentType: false,
             cache: false,
-            success: function(a) {
+            success: function (a) {
                 if (imageSize > audioSize && imageSize > videoSize) {
                     $("#loading-container").css("display", "none");
                 }
             },
-            error: function(a, b, c) {
-                alert(b+' '+c);
+            error: function (a, b, c) {
+                alert(b + ' ' + c);
             }
         });
     }
     if (videoData != '') {
-        videoURL = "http://ilatih.com/backend/userdata/videos/"+videoID;
+        videoURL = "http://ilatih.com/backend/userdata/videos/" + videoID;
         var fd3 = new FormData();
         fd3.append("id", videoID);
         fd3.append("video_data", videoData);
         $.ajax({
             type: 'POST',
-            url: PHP_URL+'upload-video-with-id.php',
+            url: PHP_URL + 'upload-video-with-id.php',
             processData: false,
             contentType: false,
             data: fd3,
             cache: false,
-            success: function(a) {
+            success: function (a) {
                 if (videoSize > imageSize && videoSize > audioSize) {
                     $("#loading-container").css("display", "none");
                 }
             },
-            error: function(a, b, c) {
-                alert(b+' '+c);
+            error: function (a, b, c) {
+                alert(b + ' ' + c);
             }
         });
     }
     if (audioData != '') {
-        audioURL = "http://ilatih.com/backend/userdata/audios/"+audioID;
+        audioURL = "http://ilatih.com/backend/userdata/audios/" + audioID;
         var fd4 = new FormData();
         fd4.append("id", audioID);
         fd4.append("audio_data", audioData);
         $.ajax({
             type: 'POST',
-            url: PHP_URL+'upload-audio-with-id.php',
+            url: PHP_URL + 'upload-audio-with-id.php',
             processData: false,
             contentType: false,
             data: fd4,
             cache: false,
-            success: function(a) {
+            success: function (a) {
                 if (audioSize > imageSize && audioSize > videoSize) {
                     $("#loading-container").css("display", "none");
                 }
             },
-            error: function(a, b, c) {
-                alert(b+' '+c);
+            error: function (a, b, c) {
+                alert(b + ' ' + c);
             }
         });
     }
@@ -2023,7 +2075,7 @@ function fillQuestion() {
             $("#fill-question-error").css("display", "block");
             return;
         }
-        answers += (isianA+"@"+isianB+"@"+isianC);
+        answers += (isianA + "@" + isianB + "@" + isianC);
         correctAnswer = 0;
     }
     $("#loading-message").html("Menyimpan soal...<br/>Mohon untuk tidak menutup Tab ini.");
@@ -2035,70 +2087,70 @@ function fillQuestion() {
     var videoURL = "";
     var audioURL = "";
     if (imageData != '') {
-        imageURL = "http://ilatih.com/backend/userdata/imgs/"+imageID;
+        imageURL = "http://ilatih.com/backend/userdata/imgs/" + imageID;
         var fd2 = new FormData();
         fd2.append("id", imageID);
         fd2.append("img_file", fillQuestionImageFile);
         $.ajax({
             type: 'POST',
-            url: PHP_URL+'upload-img-with-id.php',
+            url: PHP_URL + 'upload-img-with-id.php',
             data: fd2,
             enctype: "multipart/form-data",
             processData: false,
             contentType: false,
             cache: false,
-            success: function(a) {
+            success: function (a) {
                 console.log(a);
                 //if (imageSize > audioSize && imageSize > videoSize) {
                 $("#loading-container").css("display", "none");
                 //}
             },
-            error: function(a, b, c) {
-                alert(b+' '+c);
+            error: function (a, b, c) {
+                alert(b + ' ' + c);
             }
         });
     }
     if (videoData != '') {
-        videoURL = "http://ilatih.com/backend/userdata/videos/"+videoID;
+        videoURL = "http://ilatih.com/backend/userdata/videos/" + videoID;
         var fd3 = new FormData();
         fd3.append("id", videoID);
         fd3.append("video_data", videoData);
         $.ajax({
             type: 'POST',
-            url: PHP_URL+'upload-video-with-id.php',
+            url: PHP_URL + 'upload-video-with-id.php',
             processData: false,
             contentType: false,
             data: fd3,
             cache: false,
-            success: function(a) {
+            success: function (a) {
                 //if (videoSize > imageSize && videoSize > audioSize) {
                 $("#loading-container").css("display", "none");
                 //}
             },
-            error: function(a, b, c) {
-                alert(b+' '+c);
+            error: function (a, b, c) {
+                alert(b + ' ' + c);
             }
         });
     }
     if (audioData != '') {
-        audioURL = "http://ilatih.com/backend/userdata/audios/"+audioID;
+        audioURL = "http://ilatih.com/backend/userdata/audios/" + audioID;
         var fd4 = new FormData();
         fd4.append("id", audioID);
         fd4.append("audio_data", audioData);
         $.ajax({
             type: 'POST',
-            url: PHP_URL+'upload-audio-with-id.php',
+            url: PHP_URL + 'upload-audio-with-id.php',
             processData: false,
             contentType: false,
             data: fd4,
             cache: false,
-            success: function(a) {
+            success: function (a) {
                 //if (audioSize > imageSize && audioSize > videoSize) {
                 $("#loading-container").css("display", "none");
                 //}
             },
-            error: function(a, b, c) {
-                alert(b+' '+c);
+            error: function (a, b, c) {
+                alert(b + ' ' + c);
             }
         });
     }
@@ -2407,7 +2459,7 @@ function getDaftarBab() {
                         "</div>" +
                         "");
                 }
-                $(".menu").on("click", function() {
+                $(".menu").on("click", function () {
                     var babItem = $(this).parent().parent();
                     var dialog = babItem.find(".bab-dialog");
                     if (dialog.css("display") == "none") {
@@ -2416,56 +2468,56 @@ function getDaftarBab() {
                         dialog.css("display", "none");
                     }
                 });
-                $(".bab-dialog-edit").on("click", function() {
+                $(".bab-dialog-edit").on("click", function () {
                     var babItem = $(this).parent().parent();
                     var chapters = babItem.parent();
                     var index = chapters.children().index(babItem);
                     $("#edit-bab-name").val(jsonData[index]["name"]);
                     $("#edit-bab-container").css("display", "block");
-                    $("#edit-bab-save").on("click", function() {
+                    $("#edit-bab-save").on("click", function () {
                         var babName = $("#edit-bab-name").val();
                         if (babName == '') {
                             return;
                         }
                         $.ajax({
                             type: 'GET',
-                            url: PHP_URL+'edit-bab.php',
+                            url: PHP_URL + 'edit-bab.php',
                             data: {'id': jsonData[i]["id"], "name": jsonData[i]["name"]},
                             dataType: 'text',
                             cache: false,
-                            success: function(a) {
+                            success: function (a) {
                                 $("#prompt").css("display", "none");
                                 getDaftarBab();
                             },
-                            error: function(a, b, c) {
+                            error: function (a, b, c) {
                             }
                         });
                     });
-                    $("#edit-bab-cancel").on("click", function() {
+                    $("#edit-bab-cancel").on("click", function () {
                         $("#edit-bab-container").css("display", "none");
                     });
                 });
-                $(".bab-dialog-remove").on("click", function() {
+                $(".bab-dialog-remove").on("click", function () {
                     var babItem = $(this).parent().parent();
                     var chapters = babItem.parent();
                     var index = chapters.children().index(babItem);
                     $("#prompt-title").html("Hapus Bab");
                     $("#prompt-text").html("Apakah Anda yakin ingin menghapus bab ini?");
                     $("#prompt").css("display", "block");
-                    $("#prompt-yes").on("click", function() {
+                    $("#prompt-yes").on("click", function () {
                         $.ajax({
                             type: 'GET',
-                            url: PHP_URL+'remove-bab.php',
+                            url: PHP_URL + 'remove-bab.php',
                             data: {'id': jsonData[index]["id"]},
                             dataType: 'text',
                             cache: false,
-                            success: function(a) {
+                            success: function (a) {
                                 $("#prompt").css("display", "none");
                                 getDaftarBab();
                             }
                         });
                     });
-                    $("#prompt-no").on("click", function() {
+                    $("#prompt-no").on("click", function () {
                         $("#prompt").css("display", "none");
                     });
                 });
@@ -2811,7 +2863,7 @@ function cancelAddingCourse() {
 }
 
 function setEditCourseListener() {
-    $(".edit-course").on("click", function(a) {
+    $(".edit-course").on("click", function (a) {
         var tr = $(this).parent().parent();
         var table = tr.parent();
         var index = table.children().index(tr);
@@ -2977,19 +3029,19 @@ function selectEditQuestionType(obj) {
 }
 
 function selectImage() {
-    $("#fill-question-select-img").on("change", function() {
+    $("#fill-question-select-img").on("change", function () {
         $("#fill-question-select-img").off("change");
         fillQuestionImageFile = $(this).prop("files")[0];
         var size = $(this).prop("files")[0].size;
-        if (size > 2*1024*1024) {
+        if (size > 2 * 1024 * 1024) {
             alert("File gambar tidak boleh lebih dari 2 MB");
             return;
         }
         imageSize = size;
         var fr = new FileReader();
-        fr.onload = function() {
+        fr.onload = function () {
             imageData = fr.result;
-            $("#fill-question-img").css("backgroundImage", "url('"+fr.result+"')");
+            $("#fill-question-img").css("backgroundImage", "url('" + fr.result + "')");
         };
         fr.readAsDataURL($(this).prop("files")[0]);
     });
@@ -2997,18 +3049,18 @@ function selectImage() {
 }
 
 function editQuestionSelectImage() {
-    $("#edit-question-select-img").on("change", function() {
+    $("#edit-question-select-img").on("change", function () {
         $("#edit-question-select-img").off("change");
         var size = $(this).prop("files")[0].size;
-        if (size > 2*1024*1024) {
+        if (size > 2 * 1024 * 1024) {
             alert("File gambar tidak boleh lebih dari 2 MB");
             return;
         }
         imageSize = size;
         var fr = new FileReader();
-        fr.onload = function() {
+        fr.onload = function () {
             imageData = fr.result;
-            $("#edit-question-img").css("backgroundImage", "url('"+fr.result+"')");
+            $("#edit-question-img").css("backgroundImage", "url('" + fr.result + "')");
         };
         fr.readAsDataURL($(this).prop("files")[0]);
     });
@@ -3016,16 +3068,16 @@ function editQuestionSelectImage() {
 }
 
 function selectVideo() {
-    $("#fill-question-select-video").on("change", function() {
+    $("#fill-question-select-video").on("change", function () {
         $("#fill-question-select-video").off("change");
         var size = $(this).prop("files")[0].size;
-        if (size > 100*1024*1024) {
+        if (size > 100 * 1024 * 1024) {
             alert("File video tidak boleh lebih dari 100 MB");
             return;
         }
         videoSize = size;
         var fr = new FileReader();
-        fr.onload = function() {
+        fr.onload = function () {
             videoData = fr.result;
             $("#fill-question-video-source").attr("src", videoData);
             $("#fill-question-video")[0].load();
@@ -3036,36 +3088,30 @@ function selectVideo() {
 }
 
 function editQuestionSelectVideo() {
-    $("#edit-question-select-video").on("change", function() {
+    $("#edit-question-select-video").on("change", function () {
         $("#edit-question-select-video").off("change");
         var size = $(this).prop("files")[0].size;
-        if (size > 100*1024*1024) {
+        if (size > 100 * 1024 * 1024) {
             alert("File video tidak boleh lebih dari 100 MB");
             return;
         }
         videoSize = size;
-        var fr = new FileReader();
-        fr.onload = function() {
-            videoData = fr.result;
-            $("#edit-question-video-source").attr("src", videoData);
-            $("#edit-question-video")[0].load();
-        };
-        fr.readAsDataURL($(this).prop("files")[0]);
+        videoFile = $(this).prop("files")[0];
     });
     $("#edit-question-select-video").click();
 }
 
 function selectAudio() {
-    $("#fill-question-select-audio").on("change", function() {
+    $("#fill-question-select-audio").on("change", function () {
         $("#fill-question-select-audio").off("change");
         var size = $(this).prop("files")[0].size;
-        if (size > 50*1024*1024) {
+        if (size > 50 * 1024 * 1024) {
             alert("File audio tidak boleh lebih dari 50 MB");
             return;
         }
         audioSize = size;
         var fr = new FileReader();
-        fr.onload = function() {
+        fr.onload = function () {
             audioData = fr.result;
             $("#fill-question-audio-source").attr("src", audioData);
             $("#fill-question-audio")[0].load();
@@ -3076,21 +3122,15 @@ function selectAudio() {
 }
 
 function editQuestionSelectAudio() {
-    $("#edit-question-select-audio").on("change", function() {
+    $("#edit-question-select-audio").on("change", function () {
         $("#edit-question-select-audio").off("change");
         var size = $(this).prop("files")[0].size;
-        if (size > 50*1024*1024) {
+        if (size > 50 * 1024 * 1024) {
             alert("File audio tidak boleh lebih dari 50 MB");
             return;
         }
         audioSize = size;
-        var fr = new FileReader();
-        fr.onload = function() {
-            audioData = fr.result;
-            $("#edit-question-audio-source").attr("src", audioData);
-            $("#edit-question-audio")[0].load();
-        };
-        fr.readAsDataURL($(this).prop("files")[0]);
+        audioFile = $(this).prop("files")[0];
     });
     $("#edit-question-select-audio").click();
 }
@@ -3106,16 +3146,16 @@ function saveEdittedCourse() {
     }
     $.ajax({
         type: 'GET',
-        url: PHP_URL+'edit-course.php',
+        url: PHP_URL + 'edit-course.php',
         data: {'id': edittedCourseID, 'name': name, 'lecturer': lecturer},
         dataType: 'text',
         cache: false,
-        success: function(a) {
+        success: function (a) {
             $("#edit-course-container").css("display", "none");
             getCourses();
         },
-        error: function(a, b, c) {
-            alert(b+' '+c);
+        error: function (a, b, c) {
+            alert(b + ' ' + c);
         }
     });
 }
@@ -3125,10 +3165,10 @@ function deleteQuestion() {
     var questionId = courses[courseIndex].bab[babIndex].questions[currentQuestion].id;
     $.ajax({
         type: 'GET',
-        url: PHP_URL+'delete-question.php',
+        url: PHP_URL + 'delete-question.php',
         data: {'id': questionId},
         dataType: 'text',
-        success: function(a) {
+        success: function (a) {
             $("#edit-question-dialog-ctr").css("display", "none");
             getQuestions();
         }
