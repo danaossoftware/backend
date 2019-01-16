@@ -2212,6 +2212,13 @@ function addNewBab() {
         $("#add-bab-error").css("display", "block");
         return;
     }
+    var accessCode = $("#access-code").val();
+    if (accessCode == "") {
+        $("#add-bab-dialog").css("height", "265px");
+        $("#add-bab-error").html("Mohon masukkan kode akses");
+        $("#add-bab-error").css("display", "block");
+        return;
+    }
     if (courseIndex == -1) {
         $("#add-bab-dialog").css("height", "265px");
         $("#add-bab-error").html("Mohon pilih mata kuliah");
@@ -2221,7 +2228,7 @@ function addNewBab() {
     $.ajax({
         type: 'GET',
         url: PHP_URL + 'add-bab.php',
-        data: {'name': name, 'course_name': courseName, 'img_url': babImgURL},
+        data: {'name': name, 'course_name': courseName, 'access-code': accessCode, 'img_url': babImgURL},
         dataType: 'text',
         success: function (a) {
             if (a == 0) {

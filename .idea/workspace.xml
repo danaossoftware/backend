@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="" />
+    <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/add-bab.php" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/add-bab.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +29,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1667">
-              <caret line="1483" column="6" selection-start-line="1483" selection-start-column="6" selection-end-line="1483" selection-end-column="6" />
+            <state relative-caret-position="288">
+              <caret line="2230" column="57" lean-forward="true" selection-start-line="2230" selection-start-column="57" selection-end-line="2230" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/add-bab.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="29" column="161" selection-start-line="29" selection-start-column="161" selection-end-line="29" selection-end-column="161" />
             </state>
           </provider>
         </entry>
@@ -72,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13124">
-              <caret line="772" column="66" selection-start-line="772" selection-start-column="66" selection-end-line="772" selection-end-column="66" />
+            <state relative-caret-position="509">
+              <caret line="575" column="22" lean-forward="true" selection-start-line="575" selection-start-column="22" selection-end-line="575" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -97,6 +111,8 @@
                 <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#8;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#8;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#9;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#9;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#9;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -175,10 +191,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>coursesJSON =</find>
-      <find>edit-question-reason</find>
-      <find>reason</find>
-      <find>update-question.php</find>
       <find>audiofile</find>
       <find>mediafile =</find>
       <find>picturefile</find>
@@ -205,6 +217,10 @@
       <find>alert</find>
       <find>pictureFile</find>
       <find>isian</find>
+      <find>addque</find>
+      <find>add-question.php</find>
+      <find>tambah bab</find>
+      <find>bab-name&quot;).val</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -275,7 +291,6 @@
         <option value="$PROJECT_DIR$/scripts/get-session.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bab.html" />
-        <option value="$PROJECT_DIR$/scripts/add-bab.php" />
         <option value="$PROJECT_DIR$/scripts/upload-video-with-id.php" />
         <option value="$PROJECT_DIR$/scripts/upload-audio-with-id.php" />
         <option value="$PROJECT_DIR$/scripts/save-editted-question.php" />
@@ -297,9 +312,10 @@
         <option value="$PROJECT_DIR$/scripts/upload-audio.php" />
         <option value="$PROJECT_DIR$/scripts/upload-video.php" />
         <option value="$PROJECT_DIR$/scripts/update-question.php" />
-        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/scripts/upload-img-2.php" />
+        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/scripts/home.js" />
+        <option value="$PROJECT_DIR$/scripts/add-bab.php" />
       </list>
     </option>
   </component>
@@ -318,7 +334,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,6 +354,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,17 +428,19 @@
       <workItem from="1547476580372" duration="99000" />
       <workItem from="1547482657435" duration="6668000" />
       <workItem from="1547506438905" duration="819000" />
+      <workItem from="1547534910906" duration="37000" />
+      <workItem from="1547618060855" duration="143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255639000" />
+    <option name="totallyTimeSpent" value="255819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3751891" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38729197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="0" weight="0.3289689" />
@@ -578,13 +596,6 @@
             <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
             <element signature="e#883#889#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/add-bab.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -793,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1667">
-          <caret line="1483" column="6" selection-start-line="1483" selection-start-column="6" selection-end-line="1483" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/update-question.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -830,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13124">
-          <caret line="772" column="66" selection-start-line="772" selection-start-column="66" selection-end-line="772" selection-end-column="66" />
+        <state relative-caret-position="509">
+          <caret line="575" column="22" lean-forward="true" selection-start-line="575" selection-start-column="22" selection-end-line="575" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -855,6 +859,8 @@
             <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#8;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#8;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#9;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#9;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -918,6 +924,20 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="2230" column="57" lean-forward="true" selection-start-line="2230" selection-start-column="57" selection-end-line="2230" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/add-bab.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="29" column="161" selection-start-line="29" selection-start-column="161" selection-end-line="29" selection-end-column="161" />
         </state>
       </provider>
     </entry>

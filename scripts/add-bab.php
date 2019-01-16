@@ -2,6 +2,7 @@
 $name = $_GET["name"];
 $course_name = $_GET["course_name"];
 $imgURL = $_GET["img_url"];
+$accessCode = $_GET["access-code"];
 include 'db.php';
 $results = $c->query("SELECT * FROM courses WHERE name='" . $course_name . "'");
 if (!$results || $results->num_rows == 0) {
@@ -26,7 +27,7 @@ if ($results->num_rows > 0) {
     if ($results->num_rows > 0) {
         $row = $results->fetch_assoc();
         $id = $row["id"];
-        $c->query("INSERT INTO bab (id, name, course_id, img_url) VALUES ('" . uniqid() . "', '" . $name . "', '" . $id . "', '" . $imgURL . "')");
+        $c->query("INSERT INTO bab (id, name, course_id, access_code, img_url) VALUES ('" . uniqid() . "', '" . $name . "', '" . $id . "', '" . $accessCode . "', '" . $imgURL . "')");
         echo 0;
     } else {
         echo -4;
