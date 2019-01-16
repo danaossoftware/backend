@@ -97,7 +97,7 @@ $(document).ready(function () {
                     document.getElementById("bab-img").src = babImgURL;
                 },
                 error: function(a, b, c) {
-                    alert(b+' '+c);
+
                 }
             });
         };
@@ -131,7 +131,7 @@ function loadCoursesIntoShowCoursesOption() {
             }
         },
         error: function(a, b, c) {
-            alert(b+' '+c);
+
         }
     });
 }
@@ -162,7 +162,7 @@ function loadCourses2() {
             }
         },
         error: function(a, b, c) {
-            alert(b+' '+c);
+
         }
     });
 }
@@ -235,7 +235,7 @@ function loadBabs() {
             }
         },
         error: function(a, b, c) {
-            alert(b+' '+c);
+
         }
     });
 }
@@ -309,7 +309,7 @@ function addNewBab() {
             }
         },
         error: function(a, b, c) {
-            alert(b+' '+c);
+
         }
     });
 }
@@ -384,7 +384,7 @@ function getDaftarBab() {
                             desc.innerHTML = ""+questionsCount+" soal";
                         },
                         error: function(a, b, c) {
-                            alert(b+' '+c);
+
                         }
                     });
                     desc.setAttribute("style", "font-size: 10px; color: #888888; margin-left: 10px; margin-right: 10px; margin-bottom: 10px;");
@@ -771,7 +771,7 @@ function uploadCourses() {
                     setDeleteCourseListener();
                 },
                 error: function(a, b, c) {
-                    alert(b+' '+c);
+
                 }
             });
         };
@@ -790,7 +790,7 @@ function uploadCourses() {
                 alert(a);
             },
             error: function(a, b, c) {
-                alert(b+' '+c);
+
             }
         });*/
     });

@@ -2906,7 +2906,7 @@ function uploadCourses() {
                 alert(a);
             },
             error: function(a, b, c) {
-                alert(b+' '+c);
+
             }
         });*/
     });
