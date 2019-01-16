@@ -2429,6 +2429,7 @@ function getDaftarBab() {
                             dataType: 'text',
                             cache: false,
                             success: function (a) {
+                                alert(a);
                                 $("#edit-bab-container").css("display", "none");
                                 getDaftarBab();
                             },
