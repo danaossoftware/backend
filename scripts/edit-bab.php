@@ -2,4 +2,5 @@
 include 'db.php';
 $id = $_GET["id"];
 $name = $_GET["name"];
-$c->query("UDDATE bab SET name='" . $name . "' WHERE id='" . $id . "'");
+$accessCode = $_GET["access_code"];
+$c->query("UDDATE bab SET name='" . $name . "', access_code='" . $accessCode . "' WHERE id='" . $id . "'");

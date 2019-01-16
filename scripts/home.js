@@ -2411,16 +2411,21 @@ function getDaftarBab() {
                     var chapters = babItem.parent();
                     var index = chapters.children().index(babItem);
                     $("#edit-bab-name").val(jsonData[index]["name"]);
+                    $("#edit-bab-access-code").val(jsonData[index]["access_code"]);
                     $("#edit-bab-container").css("display", "block");
                     $("#edit-bab-save").on("click", function () {
                         var babName = $("#edit-bab-name").val();
                         if (babName == '') {
                             return;
                         }
+                        var accessCode = $("#edit-bab-access-code").val();
+                        if (accessCode == '') {
+                            return;
+                        }
                         $.ajax({
                             type: 'GET',
                             url: PHP_URL + 'edit-bab.php',
-                            data: {'id': jsonData[i]["id"], "name": jsonData[i]["name"]},
+                            data: {'id': jsonData[i]["id"], "name": jsonData[i]["name"], "access_code": accessCode},
                             dataType: 'text',
                             cache: false,
                             success: function (a) {
