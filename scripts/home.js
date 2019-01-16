@@ -2429,7 +2429,7 @@ function getDaftarBab() {
                             dataType: 'text',
                             cache: false,
                             success: function (a) {
-                                $("#prompt").css("display", "none");
+                                $("#edit-bab-container").css("display", "none");
                                 getDaftarBab();
                             },
                             error: function (a, b, c) {
