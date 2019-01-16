@@ -2425,7 +2425,7 @@ function getDaftarBab() {
                         $.ajax({
                             type: 'GET',
                             url: PHP_URL + 'edit-bab.php',
-                            data: {'id': jsonData[i]["id"], "name": jsonData[i]["name"], "access_code": accessCode},
+                            data: {'id': jsonData[index]["id"], "name": babName, "access_code": accessCode},
                             dataType: 'text',
                             cache: false,
                             success: function (a) {
