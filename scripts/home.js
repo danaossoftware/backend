@@ -2422,6 +2422,7 @@ function getDaftarBab() {
                         if (accessCode == '') {
                             return;
                         }
+                        alert(jsonData[index]["id"]);
                         $.ajax({
                             type: 'GET',
                             url: PHP_URL + 'edit-bab.php',
@@ -2429,7 +2430,6 @@ function getDaftarBab() {
                             dataType: 'text',
                             cache: false,
                             success: function (a) {
-                                alert(a);
                                 $("#edit-bab-container").css("display", "none");
                                 getDaftarBab();
                             },
