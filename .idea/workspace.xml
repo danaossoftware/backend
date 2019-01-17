@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scripts/get-all-babs.php" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/get-all-babs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,16 +26,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1988">
-              <caret line="2413" column="79" selection-start-line="2413" selection-start-column="68" selection-end-line="2413" selection-end-column="79" />
+            <state relative-caret-position="186">
+              <caret line="1434" column="20" selection-start-line="1434" selection-start-column="20" selection-end-line="1434" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/get-all-babs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="1059" column="90" selection-start-line="1059" selection-start-column="70" selection-end-line="1059" selection-end-column="90" />
+            <state relative-caret-position="492">
+              <caret line="770" column="62" selection-start-line="770" selection-start-column="43" selection-end-line="770" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -218,8 +218,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isian</find>
-      <find>addque</find>
       <find>add-question.php</find>
       <find>tambah bab</find>
       <find>bab-name&quot;).val</find>
@@ -248,6 +246,8 @@
       <find>edit-bab-container</find>
       <find>masukkan kode akses yang</find>
       <find>edit-bab-access-code</find>
+      <find>edit soal</find>
+      <find>edit-question-video</find>
     </findStrings>
     <replaceStrings>
       <replace>4</replace>
@@ -340,9 +340,9 @@
         <option value="$PROJECT_DIR$/scripts/add-bab.php" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/home.html" />
-        <option value="$PROJECT_DIR$/scripts/home.js" />
         <option value="$PROJECT_DIR$/scripts/edit-bab.php" />
         <option value="$PROJECT_DIR$/scripts/get-all-babs.php" />
+        <option value="$PROJECT_DIR$/scripts/home.js" />
       </list>
     </option>
   </component>
@@ -457,12 +457,12 @@
       <workItem from="1547506438905" duration="819000" />
       <workItem from="1547534910906" duration="37000" />
       <workItem from="1547618060855" duration="4638000" />
-      <workItem from="1547750115734" duration="66000" />
+      <workItem from="1547750115734" duration="259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260380000" />
+    <option name="totallyTimeSpent" value="260573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -851,20 +851,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/upload-audio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/bab-placeholder.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/home-backup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="777" column="73" selection-start-line="777" selection-start-column="73" selection-end-line="777" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/get-all-babs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="1059" column="90" selection-start-line="1059" selection-start-column="70" selection-end-line="1059" selection-end-column="90" />
+        <state relative-caret-position="492">
+          <caret line="770" column="62" selection-start-line="770" selection-start-column="43" selection-end-line="770" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -957,24 +964,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/home-backup.js">
+    <entry file="file://$PROJECT_DIR$/scripts/upload-audio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="777" column="73" selection-start-line="777" selection-start-column="73" selection-end-line="777" selection-end-column="73" />
+        <state relative-caret-position="34">
+          <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1988">
-          <caret line="2413" column="79" selection-start-line="2413" selection-start-column="68" selection-end-line="2413" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/get-all-babs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="186">
+          <caret line="1434" column="20" selection-start-line="1434" selection-start-column="20" selection-end-line="1434" selection-end-column="20" />
         </state>
       </provider>
     </entry>

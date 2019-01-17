@@ -1432,6 +1432,7 @@ function editQuestion(btnEditQuestion) {
     } else {
         $("#edit-question-img").css("backgroundImage", "url('img/bab-placeholder.jpg')");
     }
+    alert(videoURL);
     if (videoURL != '') {
         $("#edit-question-video-source").attr("src", videoURL);
         $("#edit-question-video")[0].load();
