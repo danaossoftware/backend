@@ -1906,6 +1906,7 @@ function saveEdittedQuestion() {
     var questionId = courses[courseIndex].bab[babIndex].questions[currentQuestion].id;
     var courseId = courses[courseIndex].bab[babIndex].questions[currentQuestion].course_id;
     var babId = courses[courseIndex].bab[babIndex].questions[currentQuestion].bab_id;
+    alert(answers);
     fd.append("question_id", questionId);
     fd.append("question", question);
     fd.append("course_id", courseId);

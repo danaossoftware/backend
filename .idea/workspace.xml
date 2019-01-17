@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79006d3b-91af-4c8d-8df4-be369a0b4e3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="1490" column="32" selection-start-line="1490" selection-start-column="32" selection-end-line="1490" selection-end-column="32" />
+            <state relative-caret-position="135">
+              <caret line="1908" column="19" selection-start-line="1908" selection-start-column="19" selection-end-line="1908" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -69,6 +68,15 @@
                 <element signature="n#style#0;n#img#0;n#div#1;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/save-editted-question.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -117,15 +125,6 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/upload-video.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/upload-audio.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
@@ -257,8 +256,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$(&quot;#add-bab-dialog&quot;).css(&quot;height&quot;, &quot;470px&quot;);</find>
-      <find>500px</find>
       <find>px</find>
       <find>add-bab-dialog</find>
       <find>$(&quot;#add-bab-dialog&quot;).css(&quot;height&quot;, &quot;550px&quot;);</find>
@@ -284,9 +281,11 @@
       <find>edit-question-content</find>
       <find>jawaban</find>
       <find>a:</find>
-      <find>edit-question-isian-a</find>
       <find>edit-question-isian-b</find>
       <find>edit-question-isian-c</find>
+      <find>edit-question-isian-a</find>
+      <find>$answers</find>
+      <find>answers</find>
     </findStrings>
     <replaceStrings>
       <replace>4</replace>
@@ -380,8 +379,8 @@
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/scripts/edit-bab.php" />
         <option value="$PROJECT_DIR$/scripts/get-all-babs.php" />
-        <option value="$PROJECT_DIR$/scripts/home.js" />
         <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/scripts/home.js" />
       </list>
     </option>
   </component>
@@ -496,12 +495,12 @@
       <workItem from="1547506438905" duration="819000" />
       <workItem from="1547534910906" duration="37000" />
       <workItem from="1547618060855" duration="4638000" />
-      <workItem from="1547750115734" duration="1224000" />
+      <workItem from="1547750115734" duration="1337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261538000" />
+    <option name="totallyTimeSpent" value="261651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -689,13 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/save-editted-question.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1011,10 +1003,17 @@
     <entry file="file://$PROJECT_DIR$/img/bab-placeholder.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/save-editted-question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="1490" column="32" selection-start-line="1490" selection-start-column="32" selection-end-line="1490" selection-end-column="32" />
+        <state relative-caret-position="135">
+          <caret line="1908" column="19" selection-start-line="1908" selection-start-column="19" selection-end-line="1908" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
