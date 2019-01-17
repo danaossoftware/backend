@@ -1568,7 +1568,6 @@ function editQuestion(btnEditQuestion) {
         } else {
             answers = $("#edit-question-isian-a").val();
         }
-        alert(audioURL);
         var reason = $("#edit-question-reason").val();
         fd.append("answers", answers);
         fd.append("correct_answer", correctAnswer);
@@ -1576,6 +1575,7 @@ function editQuestion(btnEditQuestion) {
         fd.append("picture_url", pictureURL);
         fd.append("video_url", videoURL);
         fd.append("audio_url", audioURL);
+        alert(audioURL);
         fd.append("reason", reason);
         $.ajax({
             type: 'POST',
