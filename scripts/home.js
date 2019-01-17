@@ -1561,15 +1561,14 @@ function editQuestion(btnEditQuestion) {
         fd.append("question", $("#edit-question-content").val());
         alert(questionType);
         if (questionType == 0) {
-            answers = $("#edit-question-isian-a").val();
-        } else {
             answerA = $("#edit-question-answer-a").val();
             answerB = $("#edit-question-answer-b").val();
             answerC = $("#edit-question-answer-c").val();
             answerD = $("#edit-question-answer-d").val();
             answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
+        } else {
+            answers = $("#edit-question-isian-a").val();
         }
-        alert(answers);
         var reason = $("#edit-question-reason").val();
         fd.append("answers", answers);
         fd.append("correct_answer", correctAnswer);
