@@ -27,7 +27,7 @@ var audioFile;
 var videoFile;
 
 $(document).ready(function () {
-    alert("Hello 3");
+    alert("Hello 4");
     setCheckBoxListener();
     $("#home-panel-selector").on("click", function () {
         $("#home-panel").css("display", "block");
