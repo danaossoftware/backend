@@ -1441,7 +1441,7 @@ function editQuestion(btnEditQuestion) {
     }
     alert(audioURL);
     if (audioURL != '') {
-        $("#edit-question-audio-source").attr("src", videoURL);
+        $("#edit-question-audio-source").attr("src", audioURL);
         $("#edit-question-audio")[0].load();
     } else {
         $("#edit-question-audio-source").attr("src", "");
