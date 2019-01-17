@@ -1559,6 +1559,7 @@ function editQuestion(btnEditQuestion) {
         }
         var fd = new FormData();
         fd.append("question", $("#edit-question-content").val());
+        alert(questionType);
         if (questionType == 0) {
             answers = $("#edit-question-isian-a").val();
         } else {
@@ -1568,6 +1569,7 @@ function editQuestion(btnEditQuestion) {
             answerD = $("#edit-question-answer-d").val();
             answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
         }
+        alert(answers);
         var reason = $("#edit-question-reason").val();
         fd.append("answers", answers);
         fd.append("correct_answer", correctAnswer);
