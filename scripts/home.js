@@ -1432,7 +1432,6 @@ function editQuestion(btnEditQuestion) {
     } else {
         $("#edit-question-img").css("backgroundImage", "url('img/bab-placeholder.jpg')");
     }
-    alert(videoURL);
     if (videoURL != '') {
         $("#edit-question-video-source").attr("src", videoURL);
         $("#edit-question-video")[0].load();
@@ -1560,11 +1559,15 @@ function editQuestion(btnEditQuestion) {
         }
         var fd = new FormData();
         fd.append("question", $("#edit-question-content").val());
-        answerA = $("#edit-question-answer-a").val();
-        answerB = $("#edit-question-answer-b").val();
-        answerC = $("#edit-question-answer-c").val();
-        answerD = $("#edit-question-answer-d").val();
-        answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
+        if (questionType == 0) {
+            answers = $("#edit-question-isian-a").val();
+        } else {
+            answerA = $("#edit-question-answer-a").val();
+            answerB = $("#edit-question-answer-b").val();
+            answerC = $("#edit-question-answer-c").val();
+            answerD = $("#edit-question-answer-d").val();
+            answers = answerA + "@" + answerB + "@" + answerC + "@" + answerD;
+        }
         var reason = $("#edit-question-reason").val();
         fd.append("answers", answers);
         fd.append("correct_answer", correctAnswer);
@@ -1765,7 +1768,7 @@ function addQuestion() {
     $("#answer-d").val("");
 }
 
-function saveEdittedQuestion() {
+/*function saveEdittedQuestion() {
     $("#edit-question-dialog").css("height", "500px");
     $("#edit-question-error").html("");
     $("#edit-question-error").css("display", "none");
@@ -1906,8 +1909,6 @@ function saveEdittedQuestion() {
     var questionId = courses[courseIndex].bab[babIndex].questions[currentQuestion].id;
     var courseId = courses[courseIndex].bab[babIndex].questions[currentQuestion].course_id;
     var babId = courses[courseIndex].bab[babIndex].questions[currentQuestion].bab_id;
-    alert(answers);
-    return;
     fd.append("question_id", questionId);
     fd.append("question", question);
     fd.append("course_id", courseId);
@@ -1941,7 +1942,7 @@ function saveEdittedQuestion() {
             alert(b + ' ' + c);
         }
     });
-}
+}*/
 
 function fillQuestion() {
     $("#fill-question-dialog").css("height", "500px");
@@ -2956,20 +2957,19 @@ function selectQuestionType(obj) {
     $("#fill-question-error").css("display", "none");
 }
 
-function selectEditQuestionType(obj) {
-    var index = $(".edit-question-type-item").index($(obj));
-    if (index == 0) { // Pilihan
+function selectEditQuestionType(type) {
+    if (type == 0) { // Pilihan
         $("#edit-question-pilihan-answers").css("display", "block");
         $("#edit-question-isian-answers").css("display", "none");
         $("#edit-question-dialog").css("height", "500px");
         $("#edit-question-choose-question-type").html("Pilihan");
-    } else if (index == 1) { // Isian
+    } else if (type == 1) { // Isian
         $("#edit-question-isian-answers").css("display", "block");
         $("#edit-question-pilihan-answers").css("display", "none");
         $("#edit-question-dialog").css("height", "460px");
         $("#edit-question-choose-question-type").html("Isian");
     }
-    questionType = index;
+    questionType = type;
     $("#edit-question-types").css("display", "none");
     $("#edit-question-error").css("display", "none");
 }
