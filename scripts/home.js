@@ -1553,6 +1553,7 @@ function editQuestion(btnEditQuestion) {
                 contentType: false,
                 cache: false,
                 success: function (a) {
+                    alert(a);
                     audioFile = null;
                 }
             });
@@ -1575,7 +1576,6 @@ function editQuestion(btnEditQuestion) {
         fd.append("picture_url", pictureURL);
         fd.append("video_url", videoURL);
         fd.append("audio_url", audioURL);
-        alert(audioURL);
         fd.append("reason", reason);
         $.ajax({
             type: 'POST',
