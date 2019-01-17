@@ -1448,6 +1448,7 @@ function editQuestion(btnEditQuestion) {
         $("#edit-question-audio")[0].load();
     }
     $("#edit-question-reason").val(courses[courseIndex].bab[babIndex].questions[questionIndex].reason);
+    $("#edit-question-content").val(question);
     var splittedAnswer = answers.split("@");
     if (type == 'pilihan') {
         questionType = 0;
@@ -1456,7 +1457,6 @@ function editQuestion(btnEditQuestion) {
         var answerB = splittedAnswer[1];
         var answerC = splittedAnswer[2];
         var answerD = splittedAnswer[3];
-        $("#edit-question-content").val(question);
         $("#edit-question-answer-a").val(answerA);
         $("#edit-question-answer-b").val(answerB);
         $("#edit-question-answer-c").val(answerC);
@@ -3044,7 +3044,6 @@ function editQuestionSelectVideo() {
         var fr = new FileReader();
         fr.onload = function () {
             videoData = fr.result;
-            alert(videoData);
             $("#edit-question-video-source").attr("src", fr.result);
             $("#edit-question-video")[0].load();
         };
