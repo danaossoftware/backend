@@ -1553,7 +1553,7 @@ function editQuestion(btnEditQuestion) {
                 contentType: false,
                 cache: false,
                 success: function (a) {
-                    alert(a);
+                    alert("Audio file name: "+a);
                     audioFile = null;
                 }
             });
