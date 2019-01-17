@@ -27,7 +27,6 @@ var audioFile;
 var videoFile;
 
 $(document).ready(function () {
-    alert("Hello 4");
     setCheckBoxListener();
     $("#home-panel-selector").on("click", function () {
         $("#home-panel").css("display", "block");
@@ -1433,7 +1432,6 @@ function editQuestion(btnEditQuestion) {
     } else {
         $("#edit-question-img").css("backgroundImage", "url('img/bab-placeholder.jpg')");
     }
-    alert(videoURL);
     if (videoURL != '') {
         $("#edit-question-video-source").attr("src", videoURL);
         $("#edit-question-video")[0].load();
@@ -1441,6 +1439,7 @@ function editQuestion(btnEditQuestion) {
         $("#edit-question-video-source").attr("src", "");
         $("#edit-question-video")[0].load();
     }
+    alert(audioURL);
     if (audioURL != '') {
         $("#edit-question-audio-source").attr("src", videoURL);
         $("#edit-question-audio")[0].load();
