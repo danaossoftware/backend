@@ -6,13 +6,11 @@ if (!$results) {
     return;
 }
 if ($results->num_rows > 0) {
-    $response = "[";
+    $chapters = [];
     while ($row = $results->fetch_assoc()) {
-        $response .= ("{\"id\": \"" . $row["id"] . "\", \"name\": \"" . $row["name"] . "\", \"course_id\": \"" . $row["course_id"] . "\", \"access_code\": \"" . $row["access_code"] . "\", \"img_url\": \"" . $row["img_url"] . "\"}, ");
+        array_push($chapters, $row);
     }
-    $response = substr($response, 0, strlen($response)-2);
-    $response .= "]";
-    echo $response;
+    echo json_encode($chapters);
 } else {
     echo -2;
 }
