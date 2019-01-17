@@ -1448,10 +1448,10 @@ function editQuestion(btnEditQuestion) {
     }
     $("#edit-question-reason").val(courses[courseIndex].bab[babIndex].questions[questionIndex].reason);
     $("#edit-question-content").val(question);
-    var splittedAnswer = answers.split("@");
     if (type == 'pilihan') {
         questionType = 0;
         $("#edit-question-choose-question-type").html("Pilihan");
+        var splittedAnswer = answers.split("@");
         var answerA = splittedAnswer[0];
         var answerB = splittedAnswer[1];
         var answerC = splittedAnswer[2];
@@ -1484,7 +1484,8 @@ function editQuestion(btnEditQuestion) {
     } else if (type == 'isian') {
         questionType = 1;
         $("#edit-question-choose-question-type").html("Isian");
-        var isianA = splittedAnswer[0];
+        var isianA = answers;
+        alert(isianA);
         $("#edit-question-isian-a").val(isianA);
         $("#edit-question-pilihan-answers").css("display", "none");
         $("#edit-question-isian-answers").css("display", "block");
@@ -1559,7 +1560,6 @@ function editQuestion(btnEditQuestion) {
         }
         var fd = new FormData();
         fd.append("question", $("#edit-question-content").val());
-        alert(questionType);
         if (questionType == 0) {
             answerA = $("#edit-question-answer-a").val();
             answerB = $("#edit-question-answer-b").val();
