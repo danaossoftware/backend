@@ -1485,7 +1485,6 @@ function editQuestion(btnEditQuestion) {
         questionType = 1;
         $("#edit-question-choose-question-type").html("Isian");
         var isianA = answers;
-        alert(isianA);
         $("#edit-question-isian-a").val(isianA);
         $("#edit-question-pilihan-answers").css("display", "none");
         $("#edit-question-isian-answers").css("display", "block");
@@ -1569,6 +1568,7 @@ function editQuestion(btnEditQuestion) {
         } else {
             answers = $("#edit-question-isian-a").val();
         }
+        alert(audioURL);
         var reason = $("#edit-question-reason").val();
         fd.append("answers", answers);
         fd.append("correct_answer", correctAnswer);
