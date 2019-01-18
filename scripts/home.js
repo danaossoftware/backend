@@ -554,6 +554,7 @@ function getUsers() {
                         "<td>" + email + "</td>" +
                         "<td>" + hiddenPassword + "</td>" +
                         "<td>" + phone + "</td>" +
+                        "<td><a id='user-" + i + "' class='view-score link' style='cursor: pointer;'>Lihat Skor</a></td>" +
                         "<td><a id='user-" + i + "' class='edit-user link' style='cursor: pointer;'>Edit</a></td>" +
                         "" + "</tr>");
                 }
@@ -562,12 +563,56 @@ function getUsers() {
                 setEditUserListener();
                 setUsersCheckBoxListener();
                 setUserCheckBoxListener();
+                setViewScoresLinkListener();
             }
         },
         error: function (a, b, c) {
             alert(b + ' ' + c);
         }
     });
+}
+
+function setViewScoresLinkListener() {
+    var tr = $(this).parent().parent();
+    var tbody = tr.parent();
+    var index = tbody.children().index(tr);
+    var user = usersJSON[index];
+    var userId = user["id"];
+    $.ajax({
+        type: 'GET',
+        url: 'http://ilatih.com/backend/scripts/get-scores.php',
+        data: {'user-id': userId},
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            if (a < 0) {
+                // Error
+            } else {
+                var scores = JSON.parse(a);
+                var items = "";
+                for (var i=0; i<scores.length; i++) {
+                    var score = scores[i];
+                    items += ("<tr>" +
+                        "<td>" +
+                        "<div style=\"width: 100%; height: 100%; display: flex; align-items: center; align-content: center;\">" +
+                        "<label style=\"margin-top: 10px; position: relative; user-select: none;\">&nbsp;" +
+                        "<input type=\"checkbox\" onclick=\"return false;\" style=\"visibility: visible; position: absolute; width: 0; height: 0; opacity: 0;\">" +
+                        "<div class=\"users-check\">&nbsp;</div><div class=\"users-check-img\">" +
+                        "<img src=\"img/check.png\" width=\"12px\" height=\"12px\" style=\"position: relative; left:2px; top:-6px;\">" +
+                        "</div>" +
+                        "</label>" +
+                        "</div>" +
+                        "</td>" +
+                        "<td>" + score["mata_kuliah"] + "</td>" +
+                        "<td>" + score["bab"] + "</td>" +
+                        "<td>" + score["score"] + "</td>"+
+                        "" + "</tr>");
+                }
+                $("#scores").child("tbody").append(items);
+            }
+        }
+    });
+    $("#view-score-container").css("display", "flex");
 }
 
 function setDeleteAllUsersListener() {
