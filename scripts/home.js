@@ -574,7 +574,7 @@ function getUsers() {
 
 function setViewScoresLinkListener() {
     $(".view-score").on("click", function() {
-        $("#scores").find("*").remove();
+        $("#scores").find("tbody").find("*").remove();
         var tr = $(this).parent().parent();
         var tbody = tr.parent();
         var index = tbody.children().index(tr);
