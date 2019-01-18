@@ -576,6 +576,7 @@ function setViewScoresLinkListener() {
     var tr = $(this).parent().parent();
     var tbody = tr.parent();
     var index = tbody.children().index(tr);
+    alert(index);
     var user = usersJSON[index];
     var userId = user["id"];
     $.ajax({
