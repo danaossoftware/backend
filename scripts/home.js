@@ -577,7 +577,6 @@ function setViewScoresLinkListener() {
         var tr = $(this).parent().parent();
         var tbody = tr.parent();
         var index = tbody.children().index(tr);
-        alert(index);
         var user = usersJSON[index];
         var userId = user["id"];
         $.ajax({
@@ -587,6 +586,7 @@ function setViewScoresLinkListener() {
             dataType: 'text',
             cache: false,
             success: function(a) {
+                alert(a);
                 if (a < 0) {
                     // Error
                 } else {
@@ -610,7 +610,7 @@ function setViewScoresLinkListener() {
                             "<td>" + score["score"] + "</td>"+
                             "" + "</tr>");
                     }
-                    $("#scores").child("tbody").append(items);
+                    $("#scores").find("tbody").append(items);
                 }
             }
         });
