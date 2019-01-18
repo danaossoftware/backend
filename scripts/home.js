@@ -555,7 +555,7 @@ function getUsers() {
                         "<td>" + hiddenPassword + "</td>" +
                         "<td>" + phone + "</td>" +
                         "<td><a id='user-" + i + "' class='view-score link' style='cursor: pointer;'>Lihat Skor</a></td>" +
-                        "<td><a id='user-" + i + "' class='edit-user link' style='cursor: pointer;'>Edit</a></td>" +
+                        "<td><a id='user-scores-" + i + "' class='edit-user link' style='cursor: pointer;'>Edit</a></td>" +
                         "" + "</tr>");
                 }
                 $("#users").find("tbody").append(items);
@@ -573,7 +573,7 @@ function getUsers() {
 }
 
 function setViewScoresLinkListener() {
-    $(".edit-user").on("click", function() {
+    $(".view-score").on("click", function() {
         var tr = $(this).parent().parent();
         var tbody = tr.parent();
         var index = tbody.children().index(tr);

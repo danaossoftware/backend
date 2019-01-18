@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="616" column="58" selection-start-line="616" selection-start-column="58" selection-end-line="616" selection-end-column="58" />
+            <state relative-caret-position="408">
+              <caret line="575" column="18" selection-start-line="575" selection-start-column="18" selection-end-line="575" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -47,6 +47,12 @@
                 <element signature="n#style#0;n#img#0;n#div#1;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="e#183#189#1" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="e#351#357#1" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#122#128#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -197,7 +203,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>edit soal</find>
       <find>alert(videourl</find>
       <find>edit-question-video</find>
       <find>edit-question</find>
@@ -227,6 +232,7 @@
       <find>edit</find>
       <find>table</find>
       <find>height</find>
+      <find>&quot;click</find>
     </findStrings>
     <replaceStrings>
       <replace>4</replace>
@@ -441,12 +447,12 @@
       <workItem from="1547795409898" duration="938000" />
       <workItem from="1547802960248" duration="306000" />
       <workItem from="1547803676573" duration="408000" />
-      <workItem from="1547804087907" duration="1084000" />
+      <workItem from="1547804087907" duration="1153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266175000" />
+    <option name="totallyTimeSpent" value="266244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -963,8 +969,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="616" column="58" selection-start-line="616" selection-start-column="58" selection-end-line="616" selection-end-column="58" />
+        <state relative-caret-position="408">
+          <caret line="575" column="18" selection-start-line="575" selection-start-column="18" selection-end-line="575" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -981,6 +987,12 @@
             <element signature="n#style#0;n#img#0;n#div#1;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="e#183#189#1" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="e#351#357#1" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#label#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#122#128#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
