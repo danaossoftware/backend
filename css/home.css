@@ -119,6 +119,33 @@ body {
     color: #2270f3;
 }
 
+#scores {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 98%;
+    height: auto;
+    /*border: 1px solid black;*/
+    border-collapse: collapse;
+}
+
+#scores th {
+    text-align: left;
+    color: #333333;
+    padding-left: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+#scores td {
+    border-bottom: 1px solid #888888;
+    padding-left: 10px;
+    color: #444444;
+    border-bottom: 1px solid #cccccc;
+}
+
+#scores td a {
+    text-decoration: none;
+}
+
 #courses {
     margin-left: 10px;
     margin-top: 10px;
