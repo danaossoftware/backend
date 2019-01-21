@@ -2478,6 +2478,7 @@ function getDaftarBab() {
                     var chapters = babItem.parent();
                     var index = chapters.children().index(babItem);
                     $("#edit-bab-name").val(jsonData[index]["name"]);
+                    $("#edit-bab-time-limit").val(jsonData[index]["time_limit"]);
                     $("#edit-bab-access-code").val(jsonData[index]["access_code"]);
                     $("#edit-bab-container").css("display", "block");
                     $("#edit-bab-save").on("click", function () {
