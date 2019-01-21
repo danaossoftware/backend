@@ -173,7 +173,7 @@ $(document).ready(function () {
     loadCourses2();
     $("#add-bab").on("click", function () {
         $("#bab-name").val("");
-        $("#add-bab-dialog").css("height", "300px");
+        $("#add-bab-dialog").css("height", "330px");
         $("#add-bab-error").css("display", "none");
         $("#choose-course").html("Pilih Mata Kuliah");
         $("#add-bab-access-code").val("");
@@ -2257,24 +2257,24 @@ function addCourse2(name0, lecturer0) {
 }
 
 function addNewBab() {
-    $("#add-bab-dialog").css("height", "300px");
+    $("#add-bab-dialog").css("height", "330px");
     $("#add-bab-error").css("display", "none");
     var name = $("#bab-name").val();
     if (name == '') {
-        $("#add-bab-dialog").css("height", "330px");
+        $("#add-bab-dialog").css("height", "360px");
         $("#add-bab-error").html("Mohon masukkan nama bab");
         $("#add-bab-error").css("display", "block");
         return;
     }
     var accessCode = $("#access-code").val();
     if (accessCode == "") {
-        $("#add-bab-dialog").css("height", "330px");
+        $("#add-bab-dialog").css("height", "360px");
         $("#add-bab-error").html("Mohon masukkan kode akses");
         $("#add-bab-error").css("display", "block");
         return;
     }
     if (courseIndex == -1) {
-        $("#add-bab-dialog").css("height", "330px");
+        $("#add-bab-dialog").css("height", "360px");
         $("#add-bab-error").html("Mohon pilih mata kuliah");
         $("#add-bab-error").css("display", "block");
         return;
@@ -2299,7 +2299,7 @@ function addNewBab() {
                 } else if (a == -3) {
                     $("#add-bab-error").html("Maaf, mata kuliah yang dipilih tidak terdaftar");
                 }
-                $("#add-bab-dialog").css("height", "330px");
+                $("#add-bab-dialog").css("height", "360px");
                 $("#add-bab-error").css("display", "block");
             }
         },
