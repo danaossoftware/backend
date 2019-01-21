@@ -2279,10 +2279,24 @@ function addNewBab() {
         $("#add-bab-error").css("display", "block");
         return;
     }
+    var timeLimit = $("#add-bab-time-limit").val();
+    if (timeLimit == '') {
+        $("#add-bab-dialog").css("height", "390px");
+        $("#add-bab-error").html("Mohon isi lama waktu");
+        $("#add-bab-error").css("display", "block");
+        return;
+    }
+    timeLimit = parseInt(timeLimit.trim());
+    if (timeLimit < 5) {
+        $("#add-bab-dialog").css("height", "390px");
+        $("#add-bab-error").html("Mohon isi lama waktu minimal 5 menit");
+        $("#add-bab-error").css("display", "block");
+        return;
+    }
     $.ajax({
         type: 'GET',
         url: PHP_URL + 'add-bab.php',
-        data: {'name': name, 'course_name': courseName, 'access-code': accessCode, 'img_url': babImgURL},
+        data: {'name': name, 'course_name': courseName, 'access-code': accessCode, 'img_url': babImgURL, 'time-limit': timeLimit},
         dataType: 'text',
         success: function (a) {
             if (a == 0) {

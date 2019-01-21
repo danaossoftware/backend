@@ -560,7 +560,7 @@
                     <div style="width: 100%; height: 530px;">
                         <div style="margin-top: 5px; margin-left: 20px;">Kode akses:</div>
                         <input id="add-bab-access-code" class="input1" style="width: 81%; margin-top: 5px;" type="text">
-                        <div style="margin-top: -10px; margin-left: 20px;">Lama waktu:</div>
+                        <div style="margin-top: -10px; margin-left: 20px;">Lama waktu (menit):</div>
                         <input id="add-bab-time-limit" class="input1" style="width: 81%; margin-top: 5px;" type="text">
                         <div style="margin-top: -10px; margin-left: 20px;">Nama bab:</div>
                         <input id="bab-name" class="input1" style="width: 81%; margin-top: 5px;" name="name" type="text">
@@ -1045,12 +1045,14 @@
     <!-- EDIT BAB -->
     <div id="edit-bab-container" style="display: none; width: 100%; height: 100%; position: fixed; left: 0; top: 0;">
         <div style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center;">
-            <div style="width: 500px; height: 230px; background-color: white; box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5); border: 0; border-radius: 10px;">
+            <div style="width: 500px; height: 280px; background-color: white; box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5); border: 0; border-radius: 10px;">
                 <div style="margin-top: 10px; width: 100%; display: flex; justify-content: center; font-weight: bold; font-size: 18px;">Edit Bab</div>
                 <div style="margin-left: 25px; margin-top: 10px; font-size: 15px;">Masukkan nama bab yang baru:</div>
                 <input class="input1" type="text" name="bab-name" id="edit-bab-name">
+                <div style="margin-left: 25px; margin-top: 10px; font-size: 15px;">Masukkan lama waktu yang baru:</div>
+                <input class="input1" type="text" name="limit-time" id="edit-bab-time-limit">
                 <div style="margin-left: 25px; margin-top: 10px; font-size: 15px;">Masukkan kode akses yang baru:</div>
-                <input class="input1" type="text" name="bab-name" id="edit-bab-access-code">
+                <input class="input1" type="text" name="access-code" id="edit-bab-access-code">
                 <div style="width: 100%; display: flex; justify-content: flex-end;">
                     <div id="edit-bab-cancel" class="flat-button" style="font-size: 13px;">Batal</div>
                     <div id="edit-bab-save" class="flat-button" style="font-size: 13px;">Ubah</div>
