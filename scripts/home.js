@@ -2490,10 +2490,15 @@ function getDaftarBab() {
                         if (accessCode == '') {
                             return;
                         }
+                        var timeLimit = $("#edit-bab-time-limit").val();
+                        if (timeLimit == '') {
+                            return;
+                        }
+                        timeLimit = parseInt(timeLimit);
                         $.ajax({
                             type: 'GET',
                             url: PHP_URL + 'edit-bab.php',
-                            data: {'id': jsonData[index]["id"], "name": babName, "access_code": accessCode},
+                            data: {'id': jsonData[index]["id"], "name": babName, "access_code": accessCode, "time-limit": timeLimit},
                             dataType: 'text',
                             cache: false,
                             success: function (a) {
