@@ -44,6 +44,8 @@ if ($results->num_rows > 0) {
     }
     $response = substr($response, 0, strlen($response)-2);
     $response .= "]";
+    $response = str_replace("\n", "\\n", $response);
+    $response = preg_replace('/[\x00-\x1F\x7F]/', '', $response);
     echo $response;
 } else {
     echo -2;

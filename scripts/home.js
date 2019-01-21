@@ -1256,8 +1256,6 @@ function getQuestions() {
             if (a < 0) {
                 // Error
             } else {
-                alert(a);
-                return;
                 var courses = JSON.parse(a);
                 coursesJSON = courses;
                 for (var i = 0; i < courses.length; i++) {
